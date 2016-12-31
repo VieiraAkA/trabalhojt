@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.*;
 
 /**
  *
@@ -41,6 +42,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void JanelaLogin(ActionEvent event) {
         System.out.println("Botao Login OK");
+        //stage.setScene(JanelaInicial);
         
        
     }
