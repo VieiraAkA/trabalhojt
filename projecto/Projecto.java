@@ -9,6 +9,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 /**
@@ -17,21 +18,37 @@ import javafx.stage.Stage;
  */
 public class Projecto extends Application {
     
-    @Override
-    public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
-        
-        Scene scene = new Scene(root);
-        
-        stage.setScene(scene);
-        stage.show();
-    }
-
+    
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         launch(args);
     }
+    
+    
+    
+    
+    
+    @Override
+    public void start(Stage stage) throws Exception {
+        Parent PagInicio = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        Parent PagLogin = FXMLLoader.load(getClass().getResource("FXMLLogin.fxml"));
+        //Parent PagRegisto = FXMLLoader.load(getClass().getResource("FXMLRegisto.fxml"));
+        
+        
+        Scene JanelaInicial = new Scene(PagInicio);
+        Scene JanelaLogin = new Scene(PagLogin);
+        //Scene JanelaRegisto = new Scene(PagRegisto);
+        
+        
+        
+        
+        stage.setScene(JanelaInicial);
+        stage.show();
+    }
+
+    
     
 }
