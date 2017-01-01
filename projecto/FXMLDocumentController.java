@@ -66,6 +66,18 @@ public class FXMLDocumentController implements Initializable {
        
     }
     @FXML
+    private void VoltarAtras(ActionEvent event) {
+        System.out.println("Botao Exit OK");
+        
+       
+    }
+    @FXML
+    private void FazerLogin(ActionEvent event) {
+        System.out.println("Botao Exit OK");
+        
+       
+    }
+    @FXML
     private void ExitPrograma(ActionEvent event) {
         System.out.println("Botao Exit OK");
         
