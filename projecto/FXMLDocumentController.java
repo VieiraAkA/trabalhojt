@@ -5,11 +5,16 @@
  */
 package projecto;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.*;
@@ -42,7 +47,11 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void JanelaLogin(ActionEvent event) {
         System.out.println("Botao Login OK");
-        //stage.setScene(JanelaInicial);
+        try {
+            Parent PagLogin = FXMLLoader.load(getClass().getResource("FXMLLogin.fxml"));
+        } catch (IOException ex) {
+            Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
        
     }
