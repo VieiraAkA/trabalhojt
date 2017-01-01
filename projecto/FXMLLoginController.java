@@ -18,12 +18,28 @@ import javafx.stage.*;
 
 public class FXMLLoginController implements Initializable {
     
+    @FXML
+    private Button botaoRegistar1;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        
     }    
     
+    //JanelaRegisto
+    
+    @FXML 
+    private void JanelaRegisto(ActionEvent evento_nome){
+        //evento_nome.função.......
+       
+    }
+    
+//    @FXML 
+//    private void funcaoTeste(ActionEvent evento_nome){
+//        //evento_nome.função.......
+//       
+//    }
     
     
     
