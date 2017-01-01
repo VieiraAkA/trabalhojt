@@ -15,6 +15,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.*;
@@ -49,8 +50,11 @@ public class FXMLDocumentController implements Initializable {
         System.out.println("Botao Login OK");
         try {
             Parent PagLogin = FXMLLoader.load(getClass().getResource("FXMLLogin.fxml"));
+            Scene JanelaLogin = new Scene(PagLogin);
+            
+            
         } catch (IOException ex) {
-            Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
         }
         
        
