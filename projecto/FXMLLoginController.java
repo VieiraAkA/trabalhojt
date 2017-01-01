@@ -35,6 +35,21 @@ public class FXMLLoginController implements Initializable {
        
     }
     
+    @FXML
+    private void VoltarAtras(ActionEvent event) {
+        System.out.println("Botao Exit OK");
+        
+       
+    }
+    @FXML
+    private void FazerLogin(ActionEvent event) {
+        System.out.println("Botao Exit OK");
+        
+       
+    }
+    
+    
+    
 //    @FXML 
 //    private void funcaoTeste(ActionEvent evento_nome){
 //        //evento_nome.função.......
