@@ -9,7 +9,7 @@
 
 <BorderPane id="borderInicial" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projecto.FXMLDocumentController">
     <bottom>
-      <Button fx:id="botaoExit" mnemonicParsing="false" onAction="#ExitPrograma" text="Exit" BorderPane.alignment="CENTER_RIGHT">
+      <Button fx:id="InicioBotaoExit" mnemonicParsing="false" onAction="#ExitPrograma" text="Exit" BorderPane.alignment="CENTER_RIGHT">
          <padding>
             <Insets bottom="2.0" left="10.0" right="10.0" top="2.0" />
          </padding>
@@ -36,7 +36,7 @@
             <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
          </padding>
          <children>
-            <Button fx:id="botaoLogin1" alignment="TOP_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#JanelaLogin" text="Login" textAlignment="CENTER">
+            <Button fx:id="InicioBotaoLogin" alignment="TOP_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#JanelaLogin" text="Login" textAlignment="CENTER">
                <opaqueInsets>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </opaqueInsets>
@@ -44,7 +44,7 @@
                   <Insets bottom="2.0" left="10.0" right="10.0" top="2.0" />
                </padding>
             </Button>
-            <Button fx:id="botaoRegistar" alignment="TOP_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#JanelaRegisto" text="Registar" textAlignment="CENTER" GridPane.columnIndex="1">
+            <Button fx:id="InicioBotaoRegistar" alignment="TOP_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#JanelaRegisto" text="Registar" textAlignment="CENTER" GridPane.columnIndex="1">
                <opaqueInsets>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </opaqueInsets>

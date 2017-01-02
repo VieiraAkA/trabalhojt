@@ -30,22 +30,21 @@ public class FXMLDocumentController implements Initializable {
     
     
     
-    //      BotÃµes
+    //      Botões
     
-    /*@FXML
-    private Button botaoLogin;
     @FXML
-    private Button botaoRegistar;
+    private Button InicioBotaoLogin;
     @FXML
-    private Button botaoExit;
-    */
+    private Button InicioBotaoRegistar;
+    @FXML
+    private Button InicioBotaoExit;
+    
     
     
     
     
     @FXML
     private void JanelaLogin(ActionEvent event) {
-        System.out.println("Botao Login OK");
         try {
             Parent PagLogin = FXMLLoader.load(getClass().getResource("FXMLLogin.fxml"));
             Scene JanelaLogin = new Scene(PagLogin);
@@ -61,7 +60,6 @@ public class FXMLDocumentController implements Initializable {
     }
     @FXML
     private void JanelaRegisto(ActionEvent event) {
-        System.out.println("Botao Registo OK");
         try {
             Parent PagLogin = FXMLLoader.load(getClass().getResource("FXMLRegisto.fxml"));
             Scene JanelaRegisto = new Scene(PagLogin);
@@ -76,13 +74,10 @@ public class FXMLDocumentController implements Initializable {
     }
     
     @FXML
+    
     private void ExitPrograma(ActionEvent event) {
-        System.out.println("Botao Exit OK");
-        
-        
         Repositorio.Serializar(Repositorio.FILE_NAME);
                 //Janela.close();
-        
         /*
         try {
         Parent PagLogin = FXMLLoader.load(getClass().getResource("FXMLLogin.fxml"));
@@ -95,7 +90,6 @@ public class FXMLDocumentController implements Initializable {
         //Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
         }
         */
-       
     }
     
     @Override

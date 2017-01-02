@@ -46,7 +46,7 @@
                   <Insets left="60.0" />
                </GridPane.margin>
             </Button>
-            <Button alignment="CENTER_RIGHT" mnemonicParsing="false" text="Sair" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button fx:id="botaoSair" alignment="CENTER_RIGHT" mnemonicParsing="false" text="Sair" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets left="555.0" />
                </GridPane.margin>
@@ -93,9 +93,9 @@
                   <Insets left="10.0" />
                </GridPane.margin>
             </Text>
-            <TextField fx:id="usernameint" promptText="              Username" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <TextField fx:id="passwordint" promptText="               Password" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Button fx:id="botaoRegistar1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#JanelaRegisto" text="Registar" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="11">
+            <TextField fx:id="IntUser" promptText="              Username" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="IntPW" promptText="               Password" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button fx:id="botaoRegistar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#FazerLogin" text="Registar" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="11">
                <opaqueInsets>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </opaqueInsets>
@@ -117,12 +117,12 @@
                   <Insets left="10.0" />
                </GridPane.margin>
             </Text>
-            <TextField fx:id="usernameint1" promptText="          Primeiro nome" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <TextField fx:id="passwordint1" promptText="            Ultimo nome" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-            <TextField fx:id="usernameint2" promptText="              Telemovel" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-            <TextField fx:id="passwordint2" promptText="       Cartão de Cidadão" GridPane.columnIndex="2" GridPane.rowIndex="9" />
-            <TextField fx:id="usernameint11" promptText="                 Email " GridPane.columnIndex="2" GridPane.rowIndex="8" />
-            <TextField fx:id="passwordint11" promptText="                Morada" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <TextField fx:id="IntPrimeiroNome" promptText="          Primeiro nome" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <TextField fx:id="IntUltimoNome" promptText="            Ultimo nome" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <TextField fx:id="IntTelemovel" promptText="              Telemovel" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <TextField fx:id="IntCC" promptText="       Cartão de Cidadão" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+            <TextField fx:id="IntEmail" promptText="                 Email " GridPane.columnIndex="2" GridPane.rowIndex="8" />
+            <TextField fx:id="IntMorada" promptText="                Morada" GridPane.columnIndex="2" GridPane.rowIndex="7" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Telemovel :" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <GridPane.margin>
                   <Insets left="10.0" />

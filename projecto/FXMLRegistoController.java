@@ -25,19 +25,18 @@ import javafx.stage.Stage;
  */
 public class FXMLRegistoController implements Initializable {
 
-    /*
+    
     @FXML
     private Button botaoRegistar;
     @FXML
     private Button botaoVoltar;
     @FXML
     private Button botaoSair;
-    */
+    
     
     
     @FXML
     private void VoltarAtras(ActionEvent event) {
-        System.out.println("Botao Voltar OK");
         
         try {
             Parent PagInicial = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
@@ -49,8 +48,25 @@ public class FXMLRegistoController implements Initializable {
         } catch (IOException ex) {
             //Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    
+    
+    @FXML
+    private void RegistarUser(ActionEvent event) {
+        // adicionar novo user ao sistema 
         
-       
+        System.out.println("adicionar user OK");
+        
+        try {
+            Parent PagInicial = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+            Scene Janelainicial = new Scene(PagInicial);
+            Stage Layoutinicial = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Layoutinicial.setScene(Janelainicial);
+            Layoutinicial.show();
+            
+        } catch (IOException ex) {
+            //Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     
