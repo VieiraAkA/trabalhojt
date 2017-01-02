@@ -10,7 +10,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.*;
@@ -19,7 +21,14 @@ import javafx.stage.*;
 public class FXMLLoginController implements Initializable {
     
     @FXML
-    private Button botaoRegistar1;
+    private Button botaoRegistar;
+    @FXML
+    private Button botaoVoltar;
+    @FXML
+    private Button botaoLogin;
+    @FXML
+    private Button botaoSair;
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -37,7 +46,18 @@ public class FXMLLoginController implements Initializable {
     
     @FXML
     private void VoltarAtras(ActionEvent event) {
-        System.out.println("Botao Exit OK");
+        System.out.println("Botao Voltar OK");
+        
+        try {
+            Parent PagInicial = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+            Scene Janelainicial = new Scene(PagInicial);
+            Stage Layoutinicial = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Layoutinicial.setScene(Janelainicial);
+            Layoutinicial.show();
+            
+        } catch (IOException ex) {
+            //Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
        
     }

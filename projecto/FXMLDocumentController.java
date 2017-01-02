@@ -32,12 +32,13 @@ public class FXMLDocumentController implements Initializable {
     
     //      BotÃµes
     
-    @FXML
+    /*@FXML
     private Button botaoLogin;
     @FXML
     private Button botaoRegistar;
     @FXML
     private Button botaoExit;
+    */
     
     
     
@@ -62,14 +63,14 @@ public class FXMLDocumentController implements Initializable {
     private void JanelaRegisto(ActionEvent event) {
         System.out.println("Botao Registo OK");
         try {
-            Parent PagLogin = FXMLLoader.load(getClass().getResource("FXMLLogin.fxml"));
+            Parent PagLogin = FXMLLoader.load(getClass().getResource("FXMLRegisto.fxml"));
             Scene JanelaRegisto = new Scene(PagLogin);
             Stage LayoutRegisto = (Stage) ((Node) event.getSource()).getScene().getWindow();
             LayoutRegisto.setScene(JanelaRegisto);
             LayoutRegisto.show();
             
         } catch (IOException ex) {
-            Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
         }
        
     }
