@@ -34,12 +34,14 @@ public class Projecto extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Parent PagInicio = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
-        Parent PagLogin = FXMLLoader.load(getClass().getResource("FXMLLogin.fxml"));
+        
+        //Parent PagLogin = FXMLLoader.load(getClass().getResource("FXMLLogin.fxml"));
         //Parent PagRegisto = FXMLLoader.load(getClass().getResource("FXMLRegisto.fxml"));
         
         
         Scene JanelaInicial = new Scene(PagInicio);
-        Scene JanelaLogin = new Scene(PagLogin);
+        
+        //Scene JanelaLogin = new Scene(PagLogin);
         //Scene JanelaRegisto = new Scene(PagRegisto);
         
         
