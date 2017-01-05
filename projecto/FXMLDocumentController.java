@@ -44,7 +44,7 @@ public class FXMLDocumentController implements Initializable {
     
     
     @FXML
-    private void JanelaLogin(ActionEvent event) {
+    private void inicioJanelaLogin(ActionEvent event) {
         try {
             Parent PagLogin = FXMLLoader.load(getClass().getResource("FXMLLogin.fxml"));
             Scene JanelaLogin = new Scene(PagLogin);
@@ -59,7 +59,7 @@ public class FXMLDocumentController implements Initializable {
        
     }
     @FXML
-    private void JanelaRegisto(ActionEvent event) {
+    private void inicioJanelaRegisto(ActionEvent event) {
         try {
             Parent PagLogin = FXMLLoader.load(getClass().getResource("FXMLRegisto.fxml"));
             Scene JanelaRegisto = new Scene(PagLogin);
@@ -75,7 +75,7 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     
-    private void ExitPrograma(ActionEvent event) {
+    private void inicioExitPrograma(ActionEvent event) {
         Repositorio.Serializar(Repositorio.FILE_NAME);
                 //Janela.close();
         /*

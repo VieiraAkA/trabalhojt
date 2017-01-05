@@ -16,6 +16,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.*;
+import trabalhojoaotiago.Repositorio;
 
 
 public class FXMLLoginController implements Initializable {
@@ -48,13 +49,13 @@ public class FXMLLoginController implements Initializable {
     //JanelaRegisto
     
     @FXML 
-    private void JanelaRegisto(ActionEvent evento_nome){
+    private void loginJanelaRegisto(ActionEvent evento_nome){
         //evento_nome.função.......
        
     }
     
     @FXML
-    private void VoltarAtras(ActionEvent event) {
+    private void loginVoltarAtras(ActionEvent event) {
         System.out.println("Botao Voltar OK");
         
         try {
@@ -71,10 +72,27 @@ public class FXMLLoginController implements Initializable {
        
     }
     @FXML
-    private void FazerLogin(ActionEvent event) {
+    private void loginFazerLogin(ActionEvent event) {
         System.out.println("Botao Exit OK");
         
        
+    }
+    
+    private void loginExitPrograma(ActionEvent event) {
+        Repositorio.Serializar(Repositorio.FILE_NAME);
+                //Janela.close();
+        /*
+        try {
+        Parent PagLogin = FXMLLoader.load(getClass().getResource("FXMLLogin.fxml"));
+        Scene JanelaLogin = new Scene(PagLogin);
+        Stage LayoutLogin = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        LayoutLogin.setScene(JanelaLogin);
+        LayoutLogin.show();
+        
+        } catch (IOException ex) {
+        //Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        */
     }
     
     

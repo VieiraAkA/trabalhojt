@@ -36,7 +36,7 @@ public class FXMLRegistoController implements Initializable {
     
     
     @FXML
-    private void VoltarAtras(ActionEvent event) {
+    private void registoVoltarAtras(ActionEvent event) {
         
         try {
             Parent PagInicial = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
@@ -52,7 +52,7 @@ public class FXMLRegistoController implements Initializable {
     
     
     @FXML
-    private void RegistarUser(ActionEvent event) {
+    private void registoRegistarUser(ActionEvent event) {
         // adicionar novo user ao sistema 
         
         System.out.println("adicionar user OK");
