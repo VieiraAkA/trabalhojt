@@ -18,7 +18,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.stage.*;
 import trabalhojoaotiago.Repositorio;
 
@@ -33,7 +32,7 @@ public class FXMLDocumentController implements Initializable {
     //      Botões
     
     @FXML
-    private Button InicioBotaoLogin;
+    private Button InicioBotaoLoginq;
     @FXML
     private Button InicioBotaoRegistar;
     @FXML
@@ -42,22 +41,23 @@ public class FXMLDocumentController implements Initializable {
     
     
     
-    
     @FXML
-    private void inicioJanelaLogin(ActionEvent event) {
+    private void inicioJaneladeLogin(ActionEvent evento) {
+        System.out.println("ahsgfdhagsdvgavsd");
+            Parent PaginaLogin;
         try {
-            Parent PagLogin = FXMLLoader.load(getClass().getResource("FXMLLogin.fxml"));
-            Scene JanelaLogin = new Scene(PagLogin);
-            Stage LayoutLogin = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            LayoutLogin.setScene(JanelaLogin);
-            LayoutLogin.show();
-            
-        } catch (IOException ex) {
-            //Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            PaginaLogin = FXMLLoader.load(getClass().getResource("FXMLLogin.fxml"));
         
-       
-    }
+            Scene JanelaLogin = new Scene(PaginaLogin);
+            Stage LayoutdoLogin = (Stage) ((Node) evento.getSource()).getScene().getWindow();
+            LayoutdoLogin.setScene(JanelaLogin);
+            LayoutdoLogin.show();
+            } catch (IOException ex) {
+            Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    } 
+    
+    
     @FXML
     private void inicioJanelaRegisto(ActionEvent event) {
         try {
@@ -70,11 +70,11 @@ public class FXMLDocumentController implements Initializable {
         } catch (IOException ex) {
             //Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
         }
-       
     }
     
-    @FXML
     
+    
+    @FXML
     private void inicioExitPrograma(ActionEvent event) {
         Repositorio.Serializar(Repositorio.FILE_NAME);
                 //Janela.close();
@@ -91,6 +91,8 @@ public class FXMLDocumentController implements Initializable {
         }
         */
     }
+   
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
