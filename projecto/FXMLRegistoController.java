@@ -16,6 +16,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 /**
@@ -24,8 +25,16 @@ import javafx.stage.Stage;
  * @author Asus
  */
 public class FXMLRegistoController implements Initializable {
-
     
+    
+    @FXML
+    private Circle UserExistente;
+    @FXML
+    private Circle BotaoPWCerto;
+    @FXML
+    private Circle CCExistente;
+    @FXML
+    private Circle EmailExistente;
     @FXML
     private Button botaoRegistar;
     @FXML
@@ -76,6 +85,15 @@ public class FXMLRegistoController implements Initializable {
      * @param url
      * @param rb
      */
+    
+    
+    /*@FXML
+    private int checkuser( event){
+    
+    }*/
+    
+    
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

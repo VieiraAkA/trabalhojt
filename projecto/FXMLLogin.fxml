@@ -7,11 +7,9 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane id="borderLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.72" 
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="projecto.FXMLLoginController">
+<BorderPane id="borderLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projecto.FXMLLoginController">
    <top>
       <GridPane id="GridPaneInicialTop" alignment="TOP_CENTER" hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="137.0" prefWidth="177.0" translateX="2.0" vgap="10.0" BorderPane.alignment="TOP_RIGHT">
          <columnConstraints>
@@ -118,26 +116,6 @@
                </GridPane.margin>
             </Button>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="                 Por Favor, faça aqui o seu Login!" wrappingWidth="267.5859375" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Circle fx:id="BotaoUserErrado" fill="#ff1f1f" radius="9.0" stroke="#ffffff00" strokeType="INSIDE" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="5">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin>
-            </Circle>
-            <Circle fx:id="BotaoUserCerto" fill="#00d003" radius="9.0" stroke="#ffffff00" strokeType="INSIDE" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="5">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin>
-            </Circle>
-            <Circle fx:id="BotaoPWErrado" fill="#ff1f1f" radius="9.0" stroke="#ffffff00" strokeType="INSIDE" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="6">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin>
-            </Circle>
-            <Circle fx:id="BotaoPWCerto" fill="#00d003" radius="9.0" stroke="#ffffff00" strokeType="INSIDE" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="6">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin>
-            </Circle>
          </children>
       </GridPane>
    </center>

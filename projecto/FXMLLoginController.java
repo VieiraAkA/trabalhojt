@@ -15,11 +15,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.shape.Circle;
 import javafx.stage.*;
 import trabalhojoaotiago.Repositorio;
 
 
 public class FXMLLoginController implements Initializable {
+    
+    
+    
     
     @FXML
     private Button botaoRegistar;
@@ -29,16 +33,6 @@ public class FXMLLoginController implements Initializable {
     private Button botaoLogin;
     @FXML
     private Button botaoSair;
-    @FXML
-    /*
-    private Button BotaoUserCerto;
-    @FXML
-    private Button BotaoUserErrado;
-    @FXML
-    private Button BotaoPWCerto;
-    @FXML
-    private Button BotaoPWErrado;
-    */
     
     
     

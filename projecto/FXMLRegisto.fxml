@@ -10,8 +10,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane id="borderRegisto" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.72" 
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="projecto.FXMLRegistoController">
+<BorderPane id="borderRegisto" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projecto.FXMLRegistoController">
    <top>
       <GridPane id="GridPaneInicialTop" alignment="TOP_CENTER" hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="137.0" prefWidth="177.0" translateX="2.0" vgap="10.0" BorderPane.alignment="TOP_RIGHT">
          <columnConstraints>
@@ -145,6 +144,26 @@
                   <Insets left="10.0" />
                </GridPane.margin>
             </Text>
+            <Circle fx:id="UserExistente" fill="RED" radius="9.0" stroke="#ffffff00" strokeType="INSIDE" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Circle>
+            <Circle fx:id="BotaoPWCerto" fill="#00dd00" radius="9.0" stroke="#ffffff00" strokeType="INSIDE" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Circle>
+            <Circle fx:id="CCExistente" fill="#00dd00" layoutX="736.0" layoutY="328.0" radius="9.0" stroke="#ffffff00" strokeType="INSIDE" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Circle>
+            <Circle fx:id="EmailExistente" fill="#00dd00" layoutX="746.0" layoutY="229.0" radius="9.0" stroke="#ffffff00" strokeType="INSIDE" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Circle>
          </children>
       </GridPane>
    </center>
