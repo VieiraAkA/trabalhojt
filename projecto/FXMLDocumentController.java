@@ -26,8 +26,7 @@ import trabalhojoaotiago.*;
  * @author Asus
  */
 public class FXMLDocumentController implements Initializable {
-    private Main aux;
-    
+      
     
     //      Botões
     
@@ -77,8 +76,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void inicioExitPrograma(ActionEvent event) {
         Repositorio.Serializar(Repositorio.FILE_NAME);
-                //Janela.close();
-        aux.closeProgram();
+        
         try {
         Parent PagLogin = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         Scene JanelaLogin = new Scene(PagLogin);
