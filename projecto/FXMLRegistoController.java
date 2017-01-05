@@ -18,6 +18,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
+import trabalhojoaotiago.Repositorio;
 
 /**
  * FXML Controller class
@@ -46,7 +47,7 @@ public class FXMLRegistoController implements Initializable {
     
     @FXML
     private void registoVoltarAtras(ActionEvent event) {
-        
+        System.out.println("VoltarPagInicial");
         try {
             Parent PagInicial = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
             Scene Janelainicial = new Scene(PagInicial);
@@ -64,18 +65,25 @@ public class FXMLRegistoController implements Initializable {
     private void registoRegistarUser(ActionEvent event) {
         // adicionar novo user ao sistema 
         
-        System.out.println("adicionar user OK");
+        
+    }
+    
+    
+    @FXML
+    private void registoExitPrograma(ActionEvent event) {
+        Repositorio.Serializar(Repositorio.FILE_NAME);
         
         try {
-            Parent PagInicial = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
-            Scene Janelainicial = new Scene(PagInicial);
-            Stage Layoutinicial = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Layoutinicial.setScene(Janelainicial);
-            Layoutinicial.show();
-            
+        Parent PagLogin = FXMLLoader.load(getClass().getResource("FXMLRegisto.fxml"));
+        Scene JanelaLogin = new Scene(PagLogin);
+        Stage LayoutLogin = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        LayoutLogin.setScene(JanelaLogin);
+        LayoutLogin.close();
+        
         } catch (IOException ex) {
-            //Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+        //Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
     }
     
     
@@ -85,12 +93,6 @@ public class FXMLRegistoController implements Initializable {
      * @param url
      * @param rb
      */
-    
-    
-    /*@FXML
-    private int checkuser( event){
-    
-    }*/
     
     
     

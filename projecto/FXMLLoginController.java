@@ -22,9 +22,6 @@ import trabalhojoaotiago.Repositorio;
 
 public class FXMLLoginController implements Initializable {
     
-    
-    
-    
     @FXML
     private Button botaoRegistar;
     @FXML
@@ -74,21 +71,22 @@ public class FXMLLoginController implements Initializable {
        
     }
     
+    @FXML
     private void loginExitPrograma(ActionEvent event) {
         Repositorio.Serializar(Repositorio.FILE_NAME);
                 //Janela.close();
-        /*
+        
         try {
         Parent PagLogin = FXMLLoader.load(getClass().getResource("FXMLLogin.fxml"));
         Scene JanelaLogin = new Scene(PagLogin);
         Stage LayoutLogin = (Stage) ((Node) event.getSource()).getScene().getWindow();
         LayoutLogin.setScene(JanelaLogin);
-        LayoutLogin.show();
+        LayoutLogin.close();
         
         } catch (IOException ex) {
         //Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
         }
-        */
+        
     }
     
     
