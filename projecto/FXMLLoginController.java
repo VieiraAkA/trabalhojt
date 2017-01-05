@@ -30,13 +30,15 @@ public class FXMLLoginController implements Initializable {
     @FXML
     private Button botaoSair;
     @FXML
-    /*private Button BotaoUserCerto;
+    /*
+    private Button BotaoUserCerto;
     @FXML
     private Button BotaoUserErrado;
     @FXML
     private Button BotaoPWCerto;
     @FXML
-    private Button BotaoPWErrado;*/
+    private Button BotaoPWErrado;
+    */
     
     
     
