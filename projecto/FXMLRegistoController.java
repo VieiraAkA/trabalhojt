@@ -71,6 +71,7 @@ public class FXMLRegistoController implements Initializable {
     
     @FXML
     private void registoExitPrograma(ActionEvent event) {
+        
         Repositorio.Serializar(Repositorio.FILE_NAME);
         
         try {
