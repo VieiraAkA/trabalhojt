@@ -111,6 +111,9 @@ public class Login implements Serializable {
         System.out.println("nao encontrou user existente \n");
         return false;
     }    
+    
+    
+    
     public boolean Existe_CartaoCidadao(int cc){
         System.out.println("funcaoCartaoCidadao \n");
         

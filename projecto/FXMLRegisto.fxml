@@ -94,7 +94,7 @@
                   <Insets left="10.0" />
                </GridPane.margin>
             </Text>
-            <TextField fx:id="IntUser" promptText="              Username" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="IntUser" onInputMethodTextChanged="#registo_UserExiste" promptText="              Username" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             <TextField fx:id="IntPW" promptText="               Password" GridPane.columnIndex="2" GridPane.rowIndex="3" />
             <Button fx:id="botaoRegistar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#registoRegistarUser" text="Registar" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="11">
                <opaqueInsets>
@@ -144,7 +144,7 @@
                   <Insets left="10.0" />
                </GridPane.margin>
             </Text>
-            <Circle fx:id="UserExistente" fill="RED" radius="9.0" stroke="#ffffff00" strokeType="INSIDE" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <Circle fx:id="UserExistente" fill="#0700ff" radius="9.0" stroke="#ffffff00" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets left="10.0" />
                </GridPane.margin>

@@ -15,18 +15,13 @@ public class Main extends Application {
         launch(args);
         
     }   
-    
-    //ajsgdvjshgada
     private Stage Janela;
     
     
     @Override
     public void start(Stage primaryStage) throws Exception {
         
-        
         Janela.setTitle("Gestão de Mercado de Títulos Mobiliários");
-        
-       
         
     }
     
@@ -40,9 +35,6 @@ public class Main extends Application {
         }
         return true;
     }
-    
-    
-    
     private void closeProgram(){
         boolean resultado = ConfirmBox.display("Sair", " Tem a certeza que pretende Sair ? ");     
             if(resultado){
@@ -50,7 +42,6 @@ public class Main extends Application {
                 Janela.close();
             }
     }
-    
     private boolean isTele(TextField input, String text) {
         
         try{
@@ -115,4 +106,6 @@ public class Main extends Application {
         sujestaoMorada
         sujestaoEmail
 */
+
+
         

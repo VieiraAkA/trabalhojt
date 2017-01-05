@@ -21,7 +21,7 @@ import trabalhojoaotiago.Repositorio;
 
 
 public class FXMLLoginController implements Initializable {
-    
+    private Repositorio repositorio = Repositorio.getInstance();
     @FXML
     private Button botaoRegistar;
     @FXML

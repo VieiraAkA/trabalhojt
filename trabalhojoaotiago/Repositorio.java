@@ -2,7 +2,6 @@
 package trabalhojoaotiago;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -10,8 +9,6 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class Repositorio implements Serializable  {
     
@@ -45,10 +42,10 @@ public class Repositorio implements Serializable  {
     public Map<String, Login> getListaUsers() {
         return this.ListaUsers;
     }
+    
     public void setListaUsers(Map<String, Login> ListaUsers) {
         this.ListaUsers = ListaUsers;
     }
-
     
     
     /**
@@ -58,7 +55,6 @@ public class Repositorio implements Serializable  {
     public static void Serializar(String filename)                              {
         // nao esquecer exepctions
         // Serializar um objeto para ficheiro
-        
         try{
             FileOutputStream fileOut = new FileOutputStream(filename);
             ObjectOutputStream out = new ObjectOutputStream(fileOut);

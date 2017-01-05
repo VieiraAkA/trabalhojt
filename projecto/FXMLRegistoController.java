@@ -16,9 +16,11 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
-import trabalhojoaotiago.Repositorio;
+import trabalhojoaotiago.*;
 
 /**
  * FXML Controller class
@@ -26,7 +28,10 @@ import trabalhojoaotiago.Repositorio;
  * @author Asus
  */
 public class FXMLRegistoController implements Initializable {
-    
+    private Repositorio repositorio = Repositorio.getInstance();
+    private Login loginaux;
+    //
+    //
     
     @FXML
     private Circle UserExistente;
@@ -42,6 +47,10 @@ public class FXMLRegistoController implements Initializable {
     private Button botaoVoltar;
     @FXML
     private Button botaoSair;
+    @FXML
+    private TextField IntUser;
+    
+    
     
     
     
@@ -54,7 +63,6 @@ public class FXMLRegistoController implements Initializable {
             Stage Layoutinicial = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Layoutinicial.setScene(Janelainicial);
             Layoutinicial.show();
-            
         } catch (IOException ex) {
             //Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -73,19 +81,35 @@ public class FXMLRegistoController implements Initializable {
     private void registoExitPrograma(ActionEvent event) {
         
         Repositorio.Serializar(Repositorio.FILE_NAME);
-        
         try {
-        Parent PagLogin = FXMLLoader.load(getClass().getResource("FXMLRegisto.fxml"));
-        Scene JanelaLogin = new Scene(PagLogin);
-        Stage LayoutLogin = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        LayoutLogin.setScene(JanelaLogin);
-        LayoutLogin.close();
-        
+            Parent PagLogin = FXMLLoader.load(getClass().getResource("FXMLRegisto.fxml"));
+            Scene JanelaLogin = new Scene(PagLogin);
+            Stage LayoutLogin = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            LayoutLogin.setScene(JanelaLogin);
+            LayoutLogin.close();
         } catch (IOException ex) {
-        //Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }
+    
+    @FXML
+    private void registo_UserExiste(){
+        System.out.println("ashgdas");
+        
+        if(loginaux.Existe_user( IntUser.getText()) ){
+            System.out.println("if true");
+            // true = existe
+            UserExistente.setStroke(Color.RED);
+            //UserExistente.setVisible(true);
+            UserExistente.setVisible(false);
+        }else{
+            System.out.println("if false");
+            UserExistente.setStroke(Color.GREEN);
+            UserExistente.setVisible(true);
+        }
+    }
+    
     
     
     
@@ -94,12 +118,13 @@ public class FXMLRegistoController implements Initializable {
      * @param url
      * @param rb
      */
-    
-    
-    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }  
+    
+    
+    
+    
     
 }
