@@ -6,6 +6,7 @@
 package projecto;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -30,9 +31,9 @@ import trabalhojoaotiago.*;
  *
  * @author Asus
  */
-public class FXMLRegistoController implements Initializable {
+public class FXMLRegistoController implements Initializable  {
     //private Repositorio repositorio = Repositorio.getInstance();
-    private Login loginaux = null;
+    private Login loginaux = new Login();
     //
     //
     
@@ -131,14 +132,18 @@ public class FXMLRegistoController implements Initializable {
     
     
     
+    
     @FXML
     void get_info_USER(KeyEvent event) {
-
+       
         String var = IntUser.getText();
-        //System.out.println(var);
-        boolean res= true;
+        boolean res;
         
-        if(res){
+        
+        
+        res = loginaux.Existe_user(var);
+        System.out.println(var);
+        if(res == true){
             // se true = existe
             UserExistente.setVisible(true);
             UserExistente.setFill(Color.RED);
