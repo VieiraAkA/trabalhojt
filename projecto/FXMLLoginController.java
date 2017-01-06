@@ -42,9 +42,19 @@ public class FXMLLoginController implements Initializable {
     //JanelaRegisto
     
     @FXML 
-    private void loginJanelaRegisto(ActionEvent evento_nome){
-        //evento_nome.função.......
-       
+    private void loginJanelaRegisto(ActionEvent event){
+       System.out.println("registoooooooooooooooo\n");
+            Parent PaginaRegisto;
+        try {
+            PaginaRegisto = FXMLLoader.load(getClass().getResource("FXMLRegisto.fxml"));
+        
+            Scene JanelaRegisto = new Scene(PaginaRegisto);
+            Stage LayoutdoRegisto = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            LayoutdoRegisto.setScene(JanelaRegisto);
+            LayoutdoRegisto.show();
+            } catch (IOException ex) {
+            Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     @FXML
