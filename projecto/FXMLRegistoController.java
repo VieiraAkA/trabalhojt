@@ -28,7 +28,7 @@ import trabalhojoaotiago.*;
  * @author Asus
  */
 public class FXMLRegistoController implements Initializable {
-    private Repositorio repositorio = Repositorio.getInstance();
+    //private Repositorio repositorio = Repositorio.getInstance();
     private Login loginaux;
     //
     //
@@ -63,6 +63,7 @@ public class FXMLRegistoController implements Initializable {
     private TextField IntEmail;
     @FXML
     private TextField IntMorada;   
+    
     
     
     

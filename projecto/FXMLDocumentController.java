@@ -23,6 +23,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BackgroundImage;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.*;
 import trabalhojoaotiago.*;
 
@@ -34,48 +35,21 @@ public class FXMLDocumentController implements Initializable {
       
     
     //      Botões
+    
     @FXML
-    private Button InicioBotaoLoginq;
-    @FXML
-    private Button InicioBotaoRegistar;
+    private BorderPane borderInicial;
+
     @FXML
     private Button InicioBotaoExit;
-    
+
     @FXML
-    private void inicioJaneladeLogin(ActionEvent evento) {
-        System.out.println("ahsgfdhagsdvgavsd");
-            Parent PaginaLogin;
-        try {
-            PaginaLogin = FXMLLoader.load(getClass().getResource("FXMLLogin.fxml"));
-        
-            Scene JanelaLogin = new Scene(PaginaLogin);
-            Stage LayoutdoLogin = (Stage) ((Node) evento.getSource()).getScene().getWindow();
-            LayoutdoLogin.setScene(JanelaLogin);
-            LayoutdoLogin.show();
-            } catch (IOException ex) {
-            Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    } 
-    
-    
+    private Button InicioBotaoLoginq;
+
     @FXML
-    private void inicioJanelaRegisto(ActionEvent event) {
-        try {
-            Parent PagLogin = FXMLLoader.load(getClass().getResource("FXMLRegisto.fxml"));
-            Scene JanelaRegisto = new Scene(PagLogin);
-            Stage LayoutRegisto = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            LayoutRegisto.setScene(JanelaRegisto);
-            LayoutRegisto.show();
-            
-        } catch (IOException ex) {
-            //Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-    
-    
-    
+    private Button InicioBotaoRegistar;
+
     @FXML
-    private void inicioExitPrograma(ActionEvent event) {
+    void inicioExitPrograma(ActionEvent event) {
         Repositorio.Serializar(Repositorio.FILE_NAME);
         
         try {
@@ -88,8 +62,40 @@ public class FXMLDocumentController implements Initializable {
         } catch (IOException ex) {
         //Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
     }
+
+    @FXML
+    void inicioJanelaRegisto(ActionEvent event) {
+        System.out.println("registoooooooooooooooo\n");
+            Parent PaginaRegisto;
+        try {
+            PaginaRegisto = FXMLLoader.load(getClass().getResource("FXMLRegisto.fxml"));
+        
+            Scene JanelaRegisto = new Scene(PaginaRegisto);
+            Stage LayoutdoRegisto = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            LayoutdoRegisto.setScene(JanelaRegisto);
+            LayoutdoRegisto.show();
+            } catch (IOException ex) {
+            Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    @FXML
+    void inicioJaneladeLogin(ActionEvent event) {
+        System.out.println("ahsgfdhagsdvgavsd");
+            Parent PaginaLogin;
+        try {
+            PaginaLogin = FXMLLoader.load(getClass().getResource("FXMLLogin.fxml"));
+        
+            Scene JanelaLogin = new Scene(PaginaLogin);
+            Stage LayoutdoLogin = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            LayoutdoLogin.setScene(JanelaLogin);
+            LayoutdoLogin.show();
+            } catch (IOException ex) {
+            Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
    
     
     
