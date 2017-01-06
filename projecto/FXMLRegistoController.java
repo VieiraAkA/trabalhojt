@@ -139,7 +139,7 @@ public class FXMLRegistoController implements Initializable  {
         String var = IntUser.getText();
         boolean res;
         
-        
+
         
         res = loginaux.Existe_user(var);
         System.out.println(var);
