@@ -103,6 +103,10 @@ public class Login implements Serializable {
     
     public boolean Existe_user(String user){
         System.out.println("\n\n--------------------------funcaoExiste_user \n");
+        //System.out.println( "lista de chaves: " + repositorio.getListaUsers().isEmpty() + " lista de merdas ");
+        boolean res = repositorio.getListaUsers().isEmpty();
+        if(!res)
+            System.out.println("esta vazio");
         
         if(repositorio.getListaUsers().containsKey(user)){
             System.out.println("encontrou user existente \n");
