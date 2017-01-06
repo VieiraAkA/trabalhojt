@@ -49,8 +49,20 @@ public class FXMLRegistoController implements Initializable {
     private Button botaoSair;
     @FXML
     private TextField IntUser;
-    
-    
+    @FXML
+    private TextField IntPW;
+    @FXML
+    private TextField IntPrimeiroNome;
+    @FXML
+    private TextField IntUltimoNome;
+    @FXML
+    private TextField IntTelemovel;
+    @FXML
+    private TextField IntCC;
+    @FXML
+    private TextField IntEmail;
+    @FXML
+    private TextField IntMorada;   
     
     
     
