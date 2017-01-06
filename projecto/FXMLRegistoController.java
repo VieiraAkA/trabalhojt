@@ -105,6 +105,9 @@ public class FXMLRegistoController implements Initializable {
         
     }
     
+    
+    
+    
     @FXML
     private void registo_UserExiste(TextField user){
         System.out.println("ashgdas");

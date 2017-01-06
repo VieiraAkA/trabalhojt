@@ -144,22 +144,22 @@
                   <Insets left="10.0" />
                </GridPane.margin>
             </Text>
-            <Circle fx:id="UserExistente" fill="#0700ff" radius="9.0" stroke="#ffffff00" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <Circle fx:id="UserExistente" fill="#0099ff" radius="9.0" stroke="#ffffff00" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets left="10.0" />
                </GridPane.margin>
             </Circle>
-            <Circle fx:id="BotaoPWCerto" fill="#00dd00" radius="9.0" stroke="#ffffff00" strokeType="INSIDE" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="6">
+            <Circle fx:id="BotaoPWCerto" fill="#008ddb" radius="9.0" stroke="#ffffff00" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.rowIndex="6">
                <GridPane.margin>
                   <Insets left="10.0" />
                </GridPane.margin>
             </Circle>
-            <Circle fx:id="CCExistente" fill="#00dd00" layoutX="736.0" layoutY="328.0" radius="9.0" stroke="#ffffff00" strokeType="INSIDE" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="8">
+            <Circle fx:id="CCExistente" fill="#0099ff" radius="9.0" stroke="#ffffff00" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.rowIndex="8">
                <GridPane.margin>
                   <Insets left="10.0" />
                </GridPane.margin>
             </Circle>
-            <Circle fx:id="EmailExistente" fill="#00dd00" layoutX="746.0" layoutY="229.0" radius="9.0" stroke="#ffffff00" strokeType="INSIDE" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="9">
+            <Circle fx:id="EmailExistente" fill="#0099ff" radius="9.0" stroke="#ffffff00" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.rowIndex="9">
                <GridPane.margin>
                   <Insets left="10.0" />
                </GridPane.margin>
