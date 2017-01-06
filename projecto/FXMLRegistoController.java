@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -17,7 +18,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import trabalhojoaotiago.*;
@@ -29,7 +32,7 @@ import trabalhojoaotiago.*;
  */
 public class FXMLRegistoController implements Initializable {
     //private Repositorio repositorio = Repositorio.getInstance();
-    private Login loginaux;
+    private Login loginaux = null;
     //
     //
     
@@ -106,25 +109,111 @@ public class FXMLRegistoController implements Initializable {
         
     }
     
+    @FXML
+    private void registo_dados_user_novo(ActionEvent event){
+    System.out.println("ASJGDCFASGHDBA");
+    /*
+    
+    String user = get_info(IntUser);
+    String tele = get_info(IntTelemovel);
+    String email = get_info(IntEmail);
+    String cc = get_info(IntCC);
+    
+    
+    System.out.println(user + "\n" + tele  + "\n" + email + "\n" + cc);
+    
+    boolean cuser = true, ctele = true, cemail = true, ccc = true;
+    
+    while(cuser==false &&  ctele==false &&  cemail==false && ccc==false){
+    */
+    }
+    
     
     
     
     @FXML
-    private void registo_UserExiste(TextField user){
-        System.out.println("ashgdas");
+    void get_info_USER(KeyEvent event) {
+
+        String var = IntUser.getText();
+        //System.out.println(var);
+        boolean res= true;
         
-        if(loginaux.Existe_user( IntUser.getText()) ){
-            System.out.println("if true");
-            // true = existe
-            UserExistente.setStroke(Color.RED);
-            //UserExistente.setVisible(true);
-            UserExistente.setVisible(false);
-        }else{
-            System.out.println("if false");
-            UserExistente.setStroke(Color.GREEN);
+        if(res){
+            // se true = existe
             UserExistente.setVisible(true);
+            UserExistente.setFill(Color.RED);
+        }else{
+            UserExistente.setVisible(true);
+            UserExistente.setFill(Color.GREEN);
         }
+        
+        /*
+        if(loginaux.Existe_user(var)== true){
+        // se true = existe
+        UserExistente.setStroke(Color.RED);
+        }else{
+        UserExistente.setStroke(Color.GREEN);
+        }
+        */ 
+        
+        
     }
+    
+    @FXML
+    void get_info_PW(KeyEvent event) {
+
+        String var = IntPW.getText();
+        System.out.println(var);
+        
+    }
+    @FXML
+    void get_info_FNome(KeyEvent event) {
+
+        String var = IntPrimeiroNome.getText();
+        System.out.println(var);
+        
+    }
+    @FXML
+    void get_info_UNome(KeyEvent event) {
+
+        String var = IntUltimoNome.getText();
+        System.out.println(var);
+        
+    }
+    @FXML
+    void get_info_TELE(KeyEvent event) {
+
+        String var = IntTelemovel.getText();
+        System.out.println(var);
+        
+    }
+    @FXML
+    void get_info_Morada(KeyEvent event) {
+
+        String var = IntMorada.getText();
+        System.out.println(var);
+        
+    }
+    @FXML
+    void get_info_Email(KeyEvent event) {
+
+        String var = IntEmail.getText();
+        System.out.println(var);
+        
+    }
+    @FXML
+    void get_info_CC(KeyEvent event) {
+
+        String var = IntCC.getText();
+        System.out.println(var);
+        
+    }
+    
+    
+    
+    
+    
+    
     
     
     
@@ -137,9 +226,53 @@ public class FXMLRegistoController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }  
+    } 
     
     
+    /*
+    @FXML
+    public String get_email(TextField var){
+    String email = var.getText();
+    return email;
+    }
+    @FXML
+    public String get_telemovel(TextField var){
+    String telemovel = var.getText();
+    return telemovel;
+    }
+    @FXML
+    public String get_cc(TextField var){
+    String cc = var.getText();
+    return cc;
+    }*/
+    
+    
+    
+    
+    
+    /*
+    
+    public EventHandler<ActionEvent> get_info() {
+    
+    botaoRegistar.setOnAction (e -> new EventHandler<ActionEvent>() {
+        @Override
+        public void handle(ActionEvent e) {
+            String user = IntUser.getText();
+            String tele = IntTelemovel.getText();
+            String email = IntEmail.getText();
+            String cc = IntCC.getText();
+        }
+    });
+    
+    
+    */
+    
+    
+    
+    
+    
+    
+     
     
     
     

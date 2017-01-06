@@ -6,7 +6,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.beans.property.ObjectProperty;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -14,8 +16,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.shape.Circle;
+import javafx.scene.input.InputMethodEvent;
 import javafx.stage.*;
 import trabalhojoaotiago.Repositorio;
 
@@ -31,13 +32,6 @@ public class FXMLLoginController implements Initializable {
     @FXML
     private Button botaoSair;
     
-    
-    
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-        
-    }    
     
     //JanelaRegisto
     
@@ -81,6 +75,11 @@ public class FXMLLoginController implements Initializable {
        
     }
     
+      
+    
+
+    
+    
     @FXML
     private void loginExitPrograma(ActionEvent event) {
         Repositorio.Serializar(Repositorio.FILE_NAME);
@@ -101,6 +100,15 @@ public class FXMLLoginController implements Initializable {
     
     
     
+    
+    
+    
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        
+        
+    }  
+    
 //    @FXML 
 //    private void funcaoTeste(ActionEvent evento_nome){
 //        //evento_nome.função.......
@@ -113,3 +121,29 @@ public class FXMLLoginController implements Initializable {
     
     
 }
+
+
+
+/*
+
+
+    IntUser.textProperty().addListener(new ChangeListener<String>() {
+        @Override
+        public void changed(final ObservableValue<? extends String> observable, final String oldValue, final String newValue) {
+        // this will run whenever text is changed
+        }
+    });
+
+    public ObjectProperty<EventHandler<? super InputMethodEvent>> onInputMethodTextChangedProperty() {
+       if (onInputMethodTextChanged == null) {
+           onInputMethodTextChanged =
+                   new EventHandlerProperty<InputMethodEvent>(
+                           bean,
+                           "onInputMethodTextChanged",
+                           InputMethodEvent.INPUT_METHOD_TEXT_CHANGED);
+       }
+       return onInputMethodTextChanged;
+    }
+
+
+*/

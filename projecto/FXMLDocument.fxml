@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 
 <BorderPane fx:id="borderInicial" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" 
-            prefWidth="1280.0" style="-fx-background-image: projecto.BackGround;" xmlns="http://javafx.com/javafx/8.0.72" 
+            prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.72" 
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="projecto.FXMLDocumentController">
     <bottom>
       <Button fx:id="InicioBotaoExit" mnemonicParsing="false" onAction="#inicioExitPrograma" text=" Sair " BorderPane.alignment="CENTER_RIGHT">
