@@ -40,6 +40,7 @@ public class Repositorio implements Serializable  {
     }
     
     public Map<String, Login> getListaUsers() {
+        System.out.println("Teste");
         return this.ListaUsers;
     }
     
