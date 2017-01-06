@@ -5,8 +5,12 @@
  */
 package projecto;
 
+import com.sun.prism.Image;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -18,6 +22,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.BackgroundImage;
 import javafx.stage.*;
 import trabalhojoaotiago.*;
 
@@ -29,16 +34,12 @@ public class FXMLDocumentController implements Initializable {
       
     
     //      Botões
-    
     @FXML
     private Button InicioBotaoLoginq;
     @FXML
     private Button InicioBotaoRegistar;
     @FXML
     private Button InicioBotaoExit;
-    
-    
-    
     
     @FXML
     private void inicioJaneladeLogin(ActionEvent evento) {
