@@ -33,9 +33,7 @@ import trabalhojoaotiago.*;
  */
 public class FXMLRegistoController implements Initializable  {
     //private Repositorio repositorio = Repositorio.getInstance();
-    private Login loginaux = new Login();
-    //
-    //
+    //private Login loginaux = new Login();
     
     @FXML
     private Circle UserExistente;
@@ -44,7 +42,7 @@ public class FXMLRegistoController implements Initializable  {
     @FXML
     private Circle CCExistente;
     @FXML
-    private Circle EmailExistente;
+    private Circle EmailExistente; 
     @FXML
     private Button botaoRegistar;
     @FXML
@@ -69,6 +67,17 @@ public class FXMLRegistoController implements Initializable  {
     private TextField IntMorada;   
     
     
+    
+    /**
+     * Initializes the controller class.
+     * @param url
+     * @param rb
+     */
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+        //Vaqi ser aqui que aparece o nome do user logado
+    } 
     
     
     @FXML
@@ -112,7 +121,12 @@ public class FXMLRegistoController implements Initializable  {
     
     @FXML
     private void registo_dados_user_novo(ActionEvent event){
-    System.out.println("ASJGDCFASGHDBA");
+        System.out.println("ASJGDCFASGHDBA");
+//        -//if(se esta tudo verde)
+//            -Login login = new Login();       
+//            -login.setEmail("email");
+//
+//            -Repositorio.getInstance().getListaUsers().put("o user que ele introduziu", login); AQUI adiciona á lista
     /*
     
     String user = get_info(IntUser);
@@ -135,32 +149,20 @@ public class FXMLRegistoController implements Initializable  {
     
     @FXML
     void get_info_USER(KeyEvent event) {
-       
         String var = IntUser.getText();
         boolean res;
         
-
+        res = Login.Existe_user(var);
         
-        res = loginaux.Existe_user(var);
-        System.out.println(var);
-        if(res == true){
+        UserExistente.setVisible(true);
+        if(res){
             // se true = existe
-            UserExistente.setVisible(true);
+//            UserExistente.setVisible(true);
             UserExistente.setFill(Color.RED);
         }else{
-            UserExistente.setVisible(true);
+//            UserExistente.setVisible(true);
             UserExistente.setFill(Color.GREEN);
-        }
-        
-        /*
-        if(loginaux.Existe_user(var)== true){
-        // se true = existe
-        UserExistente.setStroke(Color.RED);
-        }else{
-        UserExistente.setStroke(Color.GREEN);
-        }
-        */ 
-        
+        }        
         
     }
     
@@ -173,7 +175,6 @@ public class FXMLRegistoController implements Initializable  {
     }
     @FXML
     void get_info_FNome(KeyEvent event) {
-
         String var = IntPrimeiroNome.getText();
         System.out.println(var);
         
@@ -188,8 +189,32 @@ public class FXMLRegistoController implements Initializable  {
     @FXML
     void get_info_TELE(KeyEvent event) {
 
+//        String var = IntTelemovel.getText();
+//        System.out.println(var);
+
         String var = IntTelemovel.getText();
-        System.out.println(var);
+        boolean res;
+
+        CCExistente.setVisible(true);
+        try{
+            Integer cc = Integer.valueOf(var);
+            // se chegar aqui então é um numero inteiro
+            res = Login.Existe_CartaoCidadao(cc);
+            TELEmovelExistente.setFill(Color.GREEN);
+              
+        }catch(Exception e){
+            TELEmovelExistente.setFill(Color.RED);
+            // se chegar aqui não é um numero inteiro
+            if(var.length() != 0){
+                if(var.length() == 1){
+                    var = "";
+                }    
+                else{
+                    var = var.substring(0, var.length() - 1);
+                }    
+            }
+            IntTelemovel.setText(var);
+        }
         
     }
     @FXML
@@ -202,36 +227,51 @@ public class FXMLRegistoController implements Initializable  {
     @FXML
     void get_info_Email(KeyEvent event) {
 
+//        String var = IntEmail.getText();
+//        System.out.println(var);
         String var = IntEmail.getText();
-        System.out.println(var);
+        boolean res;
+        
+        res = Login.Existe_Email(var);
+        
+        EmailExistente.setVisible(true);
+        if(res){
+            // se true = existe
+            EmailExistente.setFill(Color.RED);
+        }
+        else{
+            EmailExistente.setFill(Color.GREEN);
+        }   
         
     }
     @FXML
     void get_info_CC(KeyEvent event) {
 
         String var = IntCC.getText();
-        System.out.println(var);
+        boolean res;
+
+        CCExistente.setVisible(true);
+        try{
+            Integer cc = Integer.valueOf(var);
+            // se chegar aqui então é um numero inteiro
+            res = Login.Existe_CartaoCidadao(cc);
+            CCExistente.setFill(Color.GREEN);
+              
+        }catch(Exception e){
+            CCExistente.setFill(Color.RED);
+            // se chegar aqui não é um numero inteiro
+            if(var.length() != 0){
+                if(var.length() == 1){
+                    var = "";
+                }    
+                else{
+                    var = var.substring(0, var.length() - 1);
+                }    
+            }
+            IntCC.setText(var);
+        }
         
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    /**
-     * Initializes the controller class.
-     * @param url
-     * @param rb
-     */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    } 
     
     
     /*
