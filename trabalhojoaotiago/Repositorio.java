@@ -15,19 +15,19 @@ public class Repositorio implements Serializable  {
     public static String FILE_NAME = "ficheiro.bin";
    
     private static Repositorio instance;
-    private Map<String, Login> ListaUsers;
+    private Map<String, Login> ListaUsers = new HashMap<>();
 //           = new HashMap<>();
     //                          private Carteira carteira;
     
     
-
+    private Repositorio(boolean cir){}
     private Repositorio(){
         try {
             Desserializar(FILE_NAME);
+//            throw new Exception();
         } catch (Exception ex) {
 //           quando o ficheiro nao existir ou estiver corrompido
             this.ListaUsers = new HashMap<>(); //   isto faz de conta que o ficheiro existe(vazio);
-            
         }
     }
     
@@ -42,6 +42,7 @@ public class Repositorio implements Serializable  {
     public Map<String, Login> getListaUsers() {
         System.out.println("Teste");
         return this.ListaUsers;
+               
     }
     
     public void setListaUsers(Map<String, Login> ListaUsers) {
@@ -59,7 +60,8 @@ public class Repositorio implements Serializable  {
         try{
             FileOutputStream fileOut = new FileOutputStream(filename);
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
-            out.writeObject(instance);
+            Repositorio myInstance = Repositorio.getInstance();
+            out.writeObject(myInstance);  //AQUI
             out.close();
             fileOut.close();
             System.out.printf("Serialized data is saved in " + filename);
