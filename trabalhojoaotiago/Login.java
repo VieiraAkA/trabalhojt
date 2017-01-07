@@ -103,27 +103,22 @@ public class Login implements Serializable {
     
     
     public static boolean Existe_user(String user){
-        System.out.println("\n\n--------------------------funcaoExiste_user \n");
-        //System.out.println( "lista de chaves: " + repositorio.getListaUsers().isEmpty() + " lista de merdas ");
-//        boolean res = repositorio.getListaUsers().isEmpty();
-//        if(!res)
-//            System.out.println("esta vazio");
+        //System.out.println("\n\n--------------------------funcaoExiste_user \n");
         
         if(Repositorio.getInstance().getListaUsers().containsKey(user)){
             System.out.println("encontrou user existente \n");
             return true;
         }
-        System.out.println("nao encontrou user existente \n");
         return false;
     }    
     
     
     
     public static boolean Existe_CartaoCidadao(int cc){
-        System.out.println("funcaoCartaoCidadao \n");
+        //System.out.println("funcaoCartaoCidadao \n");
         
         for(Login cartao : Repositorio.getInstance().getListaUsers().values() ){
-            System.out.println("cicloCartaoCidadao for\n");   
+            //System.out.println("cicloCartaoCidadao for\n");   
         
             if(cartao.CartaoCidadao == cc){
                 System.out.println("encontrou CC\n");

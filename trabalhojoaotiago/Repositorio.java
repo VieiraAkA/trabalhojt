@@ -19,8 +19,7 @@ public class Repositorio implements Serializable  {
 //           = new HashMap<>();
     //                          private Carteira carteira;
     
-    //Comentarioi
-    private Repositorio(boolean cir){}
+    
     private Repositorio(){
         try {
             Desserializar(FILE_NAME);
@@ -74,7 +73,7 @@ public class Repositorio implements Serializable  {
 
             FileInputStream fileIn = new FileInputStream(filename);
             ObjectInputStream in = new ObjectInputStream(fileIn);
-            instance = (Repositorio) in.readObject();
+            Repositorio.instance = (Repositorio) in.readObject();            
             in.close();
             fileIn.close();
             System.out.printf("Desserialized data from file " + filename + "\n");
