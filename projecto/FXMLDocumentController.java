@@ -50,7 +50,7 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     void inicioExitPrograma(ActionEvent event) {
-        Repositorio.Serializar(Repositorio.FILE_NAME);
+        Projecto.repository.Serializar();
         
         try {
         Parent PagLogin = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
@@ -102,6 +102,7 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        System.out.println("tamanho: " + Projecto.repository.getListaUsers().size());
     }    
     
 }

@@ -111,7 +111,7 @@ public class FXMLRegistoController implements Initializable  {
     @FXML
     private void registoExitPrograma(ActionEvent event) {
         
-        Repositorio.Serializar(Repositorio.FILE_NAME);
+        Projecto.repository.Serializar();
         try {
             Parent PagLogin = FXMLLoader.load(getClass().getResource("FXMLRegisto.fxml"));
             Scene JanelaLogin = new Scene(PagLogin);
@@ -146,7 +146,7 @@ public class FXMLRegistoController implements Initializable  {
             utilizador.setTelefone(Tele);
             utilizador.setEmail(IntEmail.getText());
             utilizador.setCartaoCidadao(Cc);
-            Repositorio.getInstance().getListaUsers().put(aux_user, utilizador);
+            Projecto.repository.getListaUsers().put(aux_user, utilizador);
             
             
         }else{

@@ -4,7 +4,7 @@ package trabalhojoaotiago;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.*;
-import trabalhojoaotiago.Repositorio;
+import projecto.Projecto;
 
 public class Login implements Serializable {
     private String User;
@@ -16,9 +16,9 @@ public class Login implements Serializable {
     private int Telefone = 000000000;
     private String Morada;
     private double Saldo;
-    private Carteira carteira;
+    //private Carteira carteira;
     
-    private Repositorio repositorio = Repositorio.getInstance();
+//    private Repositorio repositorio = Repositorio.getInstance();
     
     public Login() {
         
@@ -34,8 +34,17 @@ public class Login implements Serializable {
         this.Telefone = Tele;
         this.Morada = morada;
         this.Saldo = 0;
-        this.carteira = new Carteira();
+        //this.carteira = new Carteira();
     }  
+
+    @Override
+    public String toString() {
+        
+        String var = this.Email + " - " + this.User;
+        
+        return var; //To change body of generated methods, choose Tools | Templates.
+    }
+    
     
     
     public String getUser()         {
@@ -65,9 +74,9 @@ public class Login implements Serializable {
     public double getSaldo()        {
         return Saldo;
     }    
-    public Carteira getCarteira()   {
-        return carteira;
-    }
+//    public Carteira getCarteira()   {
+//        return carteira;
+//    }
     
     
     public void setUser(String User)                {
@@ -97,9 +106,9 @@ public class Login implements Serializable {
     public void setSaldo(double Saldo)              {
         this.Saldo = Saldo;
     }
-    public void setCarteira(Carteira carteira)      {
-        this.carteira = carteira;
-    }
+//    public void setCarteira(Carteira carteira)      {
+//        this.carteira = carteira;
+//    }
     
     
     public static boolean Existe_user(String user){
@@ -109,7 +118,7 @@ public class Login implements Serializable {
 //        if(!res)
 //            System.out.println("esta vazio");
         
-        if(Repositorio.getInstance().getListaUsers().containsKey(user)){
+        if(Projecto.repository.getListaUsers().containsKey(user)){
             System.out.println("encontrou user existente \n");
             return true;
         }
@@ -122,7 +131,7 @@ public class Login implements Serializable {
     public static boolean Existe_CartaoCidadao(int cc){
         System.out.println("funcaoCartaoCidadao \n");
         
-        for(Login cartao : Repositorio.getInstance().getListaUsers().values() ){
+        for(Login cartao : Projecto.repository.getListaUsers().values() ){
             System.out.println("cicloCartaoCidadao for\n");   
         
             if(cartao.CartaoCidadao == cc){
@@ -135,7 +144,7 @@ public class Login implements Serializable {
     public static boolean Existe_telemovel(int tele){
         System.out.println("funcaotelemovel \n");
         
-        for(Login telemovel : Repositorio.getInstance().getListaUsers().values() ){
+        for(Login telemovel : Projecto.repository.getListaUsers().values() ){
         System.out.println("ciclotelemovel for\n");   
         
             if(telemovel.Telefone == tele){
@@ -148,7 +157,7 @@ public class Login implements Serializable {
     public static boolean Existe_Email(String Email){
         System.out.println("funcaoCartaoCidadao \n");
         
-        for(Login email : Repositorio.getInstance().getListaUsers().values() ){
+        for(Login email : Projecto.repository.getListaUsers().values() ){
         System.out.println("cicloCartaoCidadao for\n");   
         
             if(email.Email.equals(Email)){

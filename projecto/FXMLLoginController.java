@@ -18,11 +18,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.InputMethodEvent;
 import javafx.stage.*;
-import trabalhojoaotiago.Repositorio;
+import trabalhojoaotiago.Repository;
 
 
 public class FXMLLoginController implements Initializable {
-    private Repositorio repositorio = Repositorio.getInstance();
+    
     @FXML
     private Button botaoRegistar;
     @FXML
@@ -82,7 +82,7 @@ public class FXMLLoginController implements Initializable {
     
     @FXML
     private void loginExitPrograma(ActionEvent event) {
-        Repositorio.Serializar(Repositorio.FILE_NAME);
+        Projecto.repository.Serializar();
                 //Janela.close();
         
         try {

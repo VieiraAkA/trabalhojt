@@ -11,6 +11,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import trabalhojoaotiago.Login;
+import trabalhojoaotiago.Repository;
 
 /**
  *
@@ -18,7 +20,8 @@ import javafx.stage.Stage;
  */
 public class Projecto extends Application {
     
-    
+    public static Repository repository;
+    public static String filename = "ficheiro.bin";
     
     /**
      * @param args the command line arguments
