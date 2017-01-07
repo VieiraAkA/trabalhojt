@@ -17,6 +17,7 @@ public class Login implements Serializable {
     private String Morada;
     private double Saldo;
     private Carteira carteira;
+    
     private Repositorio repositorio = Repositorio.getInstance();
     
     public Login() {
@@ -101,14 +102,14 @@ public class Login implements Serializable {
     }
     
     
-    public boolean Existe_user(String user){
+    public static boolean Existe_user(String user){
         System.out.println("\n\n--------------------------funcaoExiste_user \n");
         //System.out.println( "lista de chaves: " + repositorio.getListaUsers().isEmpty() + " lista de merdas ");
-        boolean res = repositorio.getListaUsers().isEmpty();
-        if(!res)
-            System.out.println("esta vazio");
+//        boolean res = repositorio.getListaUsers().isEmpty();
+//        if(!res)
+//            System.out.println("esta vazio");
         
-        if(repositorio.getListaUsers().containsKey(user)){
+        if(Repositorio.getInstance().getListaUsers().containsKey(user)){
             System.out.println("encontrou user existente \n");
             return true;
         }
@@ -118,10 +119,10 @@ public class Login implements Serializable {
     
     
     
-    public boolean Existe_CartaoCidadao(int cc){
+    public static boolean Existe_CartaoCidadao(int cc){
         System.out.println("funcaoCartaoCidadao \n");
         
-        for(Login cartao : repositorio.getListaUsers().values() ){
+        for(Login cartao : Repositorio.getInstance().getListaUsers().values() ){
             System.out.println("cicloCartaoCidadao for\n");   
         
             if(cartao.CartaoCidadao == cc){
@@ -131,10 +132,10 @@ public class Login implements Serializable {
         }
         return false;
     }  
-    public boolean Existe_telemovel(int tele){
+    public static boolean Existe_telemovel(int tele){
         System.out.println("funcaoCartaoCidadao \n");
         
-        for(Login telemovel : repositorio.getListaUsers().values() ){
+        for(Login telemovel : Repositorio.getInstance().getListaUsers().values() ){
         System.out.println("cicloCartaoCidadao for\n");   
         
             if(telemovel.Telefone == tele){
@@ -144,10 +145,10 @@ public class Login implements Serializable {
         }
         return false;
     }  
-    public boolean Existe_Email(String Email){
+    public static boolean Existe_Email(String Email){
         System.out.println("funcaoCartaoCidadao \n");
         
-        for(Login email : repositorio.getListaUsers().values() ){
+        for(Login email : Repositorio.getInstance().getListaUsers().values() ){
         System.out.println("cicloCartaoCidadao for\n");   
         
             if(email.Email.equals(Email)){
