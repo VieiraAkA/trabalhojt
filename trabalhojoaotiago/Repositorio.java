@@ -19,7 +19,7 @@ public class Repositorio implements Serializable  {
 //           = new HashMap<>();
     //                          private Carteira carteira;
     
-    
+    //Comentarioi
     private Repositorio(boolean cir){}
     private Repositorio(){
         try {
