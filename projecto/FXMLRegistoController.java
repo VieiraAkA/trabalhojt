@@ -71,6 +71,9 @@ public class FXMLRegistoController implements Initializable  {
     boolean email = false;
     boolean cc = false;
     
+    
+    
+    
     /**
      * Initializes the controller class.
      * @param url
@@ -124,31 +127,42 @@ public class FXMLRegistoController implements Initializable  {
     @FXML
     private void registo_dados_user_novo(ActionEvent event){
         System.out.println("ASJGDCFASGHDBA");
-//        -//if(se esta tudo verde)
-//            -Login login = new Login();       
-//            -login.setEmail("email");
-//
-//            -Repositorio.getInstance().getListaUsers().put("o user que ele introduziu", login); AQUI adiciona á lista
-    /*
-    
-    String user = get_info(IntUser);
-    String tele = get_info(IntTelemovel);
-    String email = get_info(IntEmail);
-    String cc = get_info(IntCC);
-    
-    
-    System.out.println(user + "\n" + tele  + "\n" + email + "\n" + cc);
-    
-    boolean cuser = true, ctele = true, cemail = true, ccc = true;
-    
-    while(cuser==false &&  ctele==false &&  cemail==false && ccc==false){
-    */
+
+        if (user == true && tele == true && email == true && cc == true){
+            String aux_tele = IntTelemovel.getText();
+            Integer Tele = Integer.valueOf(aux_tele);
+            
+            String aux_cc = IntCC.getText();
+            Integer Cc = Integer.valueOf(aux_cc);
+            
+            Login utilizador = new Login();
+            
+            utilizador.setUser(IntUser.getText());
+            utilizador.setPassword(IntPW.getText());
+            utilizador.setPriNome(IntPrimeiroNome.getText());
+            utilizador.setUltNome(IntUltimoNome.getText());
+            utilizador.setMorada(IntMorada.getText());
+            utilizador.setTelefone(Tele);
+            utilizador.setEmail(IntEmail.getText());
+            utilizador.setCartaoCidadao(Cc);
+            Repositorio.getInstance().getListaUsers().put(IntUser.getText(), utilizador);
+            
+            
+        }
+ 
+
+        //        -//if(se esta tudo verde)
+        //            -Login login = new Login();       
+        //            -login.setEmail("email");
+        //
+        //            -Repositorio.getInstance().getListaUsers().put(IntUser.getText(), utilizador);; AQUI adiciona á lista
+        
     }
     
     
     
     
-    
+    //######################################################################         Username         ######################################
     @FXML
     void get_info_USER(KeyEvent event) {
         String var = IntUser.getText();
@@ -165,27 +179,30 @@ public class FXMLRegistoController implements Initializable  {
         }        
         
     }
-    
+    //##########################################################################     PASSWORD     ##########################################
     @FXML
     void get_info_PW(KeyEvent event) {
 
         String var = IntPW.getText();
-        System.out.println(var);
+        //System.out.println(var);
         
     }
+    //#######################################################################      Primeiro nome       #####################################
     @FXML
     void get_info_FNome(KeyEvent event) {
         String var = IntPrimeiroNome.getText();
-        System.out.println(var);
+        //System.out.println(var);
         
     }
+    //##########################################################################    Ultimo Nome      #######################################
     @FXML
     void get_info_UNome(KeyEvent event) {
 
         String var = IntUltimoNome.getText();
-        System.out.println(var);
+        //System.out.println(var);
         
     }
+    //#########################################################################      Telemovel       #######################################
     @FXML
     void get_info_TELE(KeyEvent event) {
         
@@ -224,13 +241,15 @@ public class FXMLRegistoController implements Initializable  {
     }
         
     }
+    //##########################################################################      Morada      ##########################################
     @FXML
     void get_info_Morada(KeyEvent event) {
 
         String var = IntMorada.getText();
-        System.out.println(var);
+        //System.out.println(var);
         
     }
+//##############################################################################      Email        #########################################
     @FXML
     void get_info_Email(KeyEvent event) {
 
@@ -252,6 +271,7 @@ public class FXMLRegistoController implements Initializable  {
         }   
         
     }
+    //#######################################################################      Cartao Cidadao      #####################################
     @FXML
     void get_info_CC(KeyEvent event) {
 
