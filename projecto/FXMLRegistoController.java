@@ -75,7 +75,6 @@ public class FXMLRegistoController implements Initializable  {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
         //Vaqi ser aqui que aparece o nome do user logado
     } 
     
