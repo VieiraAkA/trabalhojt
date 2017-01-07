@@ -129,6 +129,7 @@ public class FXMLRegistoController implements Initializable  {
         System.out.println("ASJGDCFASGHDBA");
 
         if (user == true && tele == true && email == true && cc == true){
+            String aux_user = IntUser.getText();
             String aux_tele = IntTelemovel.getText();
             Integer Tele = Integer.valueOf(aux_tele);
             
@@ -145,9 +146,11 @@ public class FXMLRegistoController implements Initializable  {
             utilizador.setTelefone(Tele);
             utilizador.setEmail(IntEmail.getText());
             utilizador.setCartaoCidadao(Cc);
-            Repositorio.getInstance().getListaUsers().put(IntUser.getText(), utilizador);
+            Repositorio.getInstance().getListaUsers().put(aux_user, utilizador);
             
             
+        }else{
+            System.out.println("dados ivalidos ");
         }
  
 

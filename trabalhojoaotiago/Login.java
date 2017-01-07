@@ -133,10 +133,10 @@ public class Login implements Serializable {
         return false;
     }  
     public static boolean Existe_telemovel(int tele){
-        System.out.println("funcaoCartaoCidadao \n");
+        System.out.println("funcaotelemovel \n");
         
         for(Login telemovel : Repositorio.getInstance().getListaUsers().values() ){
-        System.out.println("cicloCartaoCidadao for\n");   
+        System.out.println("ciclotelemovel for\n");   
         
             if(telemovel.Telefone == tele){
                 System.out.println("encontrou telemovel\n");
