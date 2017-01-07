@@ -189,32 +189,32 @@ public class FXMLRegistoController implements Initializable  {
     @FXML
     void get_info_TELE(KeyEvent event) {
 
-//        String var = IntTelemovel.getText();
-//        System.out.println(var);
-
         String var = IntTelemovel.getText();
-        boolean res;
+        System.out.println(var);
 
-        CCExistente.setVisible(true);
-        try{
-            Integer cc = Integer.valueOf(var);
-            // se chegar aqui então é um numero inteiro
-            res = Login.Existe_CartaoCidadao(cc);
-            TELEmovelExistente.setFill(Color.GREEN);
-              
-        }catch(Exception e){
-            TELEmovelExistente.setFill(Color.RED);
-            // se chegar aqui não é um numero inteiro
-            if(var.length() != 0){
-                if(var.length() == 1){
-                    var = "";
-                }    
-                else{
-                    var = var.substring(0, var.length() - 1);
-                }    
-            }
-            IntTelemovel.setText(var);
-        }
+//        String var = IntTelemovel.getText();
+//        boolean res;
+//
+//        CCExistente.setVisible(true);
+//        try{
+//            Integer cc = Integer.valueOf(var);
+//            // se chegar aqui então é um numero inteiro
+//            res = Login.Existe_CartaoCidadao(cc);
+//            TELEmovelExistente.setFill(Color.GREEN);
+//              
+//        }catch(Exception e){
+//            TELEmovelExistente.setFill(Color.RED);
+//            // se chegar aqui não é um numero inteiro
+//            if(var.length() != 0){
+//                if(var.length() == 1){
+//                    var = "";
+//                }    
+//                else{
+//                    var = var.substring(0, var.length() - 1);
+//                }    
+//            }
+//            IntTelemovel.setText(var);
+//        }
         
     }
     @FXML
