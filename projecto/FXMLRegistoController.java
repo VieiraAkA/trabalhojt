@@ -216,7 +216,7 @@ public class FXMLRegistoController implements Initializable  {
             Integer Tele = Integer.valueOf(var);
             // se chegar aqui então é um numero inteiro
 
-            res = Login.Existe_CartaoCidadao(Tele);
+            res = Login.Existe_telemovel(Tele);
             
             if(res){
                 // se true = existe

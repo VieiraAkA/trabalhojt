@@ -64,7 +64,7 @@ public class Repositorio implements Serializable  {
             out.writeObject(myInstance);  //AQUI
             out.close();
             fileOut.close();
-            System.out.printf("Serialized data is saved in " + filename);
+            System.out.printf("Serialized data is saved in " + filename + "\n");
         }catch (IOException ex){
             System.out.println("Erro: " + ex.getMessage());
         }
