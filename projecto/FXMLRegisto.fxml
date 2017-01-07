@@ -131,8 +131,8 @@
             <TextField fx:id="IntUltimoNome" onKeyTyped="#get_info_UNome" promptText="            Ultimo nome" GridPane.columnIndex="2" GridPane.rowIndex="5" />
             <TextField fx:id="IntTelemovel" onKeyTyped="#get_info_TELE" promptText="              Telemovel" GridPane.columnIndex="2" GridPane.rowIndex="6" />
             <TextField fx:id="IntMorada" onKeyTyped="#get_info_Morada" promptText="                Morada" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-            <TextField fx:id="IntEmail" onKeyTyped="#get_info_Email" promptText="                 Email " GridPane.columnIndex="2" GridPane.rowIndex="8" />
-            <TextField fx:id="IntCC" onKeyTyped="#get_info_CC" promptText="       Cartão de Cidadão" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+            <TextField fx:id="IntEmail" onKeyReleased="#get_info_Email" promptText="                 Email " GridPane.columnIndex="2" GridPane.rowIndex="8" />
+            <TextField fx:id="IntCC" onKeyReleased="#get_info_CC" promptText="       Cartão de Cidadão" GridPane.columnIndex="2" GridPane.rowIndex="9" />
             <Button fx:id="botaoRegistar2" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#registo_dados_user_novo" text="Registar" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="11">
                <opaqueInsets>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
