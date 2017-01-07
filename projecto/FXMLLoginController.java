@@ -16,20 +16,25 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.input.InputMethodEvent;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import javafx.stage.*;
+import trabalhojoaotiago.Login;
 import trabalhojoaotiago.Repository;
 
 
 public class FXMLLoginController implements Initializable {
     @FXML
-    private Button botaoRegistar;
+    private TextField IntUser;
     @FXML
-    private Button botaoVoltar;
+    private PasswordField IntPW;
     @FXML
-    private Button botaoLogin;
-    @FXML
-    private Button botaoSair;
+    private Text InfoErrada;
+    
     
     
     //JanelaRegisto
@@ -69,14 +74,28 @@ public class FXMLLoginController implements Initializable {
     }
     @FXML
     private void loginFazerLogin(ActionEvent event) {
-        System.out.println("Botao Exit OK");
+        String intuser = IntUser.getText();
+        String intpw = IntPW.getText();
         
-       
+        if(Projecto.repository.getListaUsers().containsKey(intuser)){
+            
+            if (Projecto.repository.getListaUsers().get(intuser).getPassword().equals(intpw)){
+                try {
+                    Parent MenuInvestidor = FXMLLoader.load(getClass().getResource("FXMLMenuInvestidor.fxml"));
+                    Scene JanelaInvestidor = new Scene(MenuInvestidor);
+                    Stage LayoutInvestidor = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                    LayoutInvestidor.setScene(JanelaInvestidor);
+                    LayoutInvestidor.show();
+                } catch (IOException ex) {
+                    //Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }else{
+                InfoErrada.setText  ("        Password Incorrecta! Tente novamente.");
+            }
+        }else{
+            InfoErrada.setText      ("   User ou Password Incorrectos! Tente novamente.");
+        }
     }
-    
-      
-    
-
     
     
     @FXML
@@ -98,51 +117,9 @@ public class FXMLLoginController implements Initializable {
     }
     
     
-    
-    
-    
-    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
         
     }  
-    
-//    @FXML 
-//    private void funcaoTeste(ActionEvent evento_nome){
-//        //evento_nome.função.......
-//       
-//    }
-    
-    
-    
-    
-    
-    
 }
-
-
-
-/*
-
-
-    IntUser.textProperty().addListener(new ChangeListener<String>() {
-        @Override
-        public void changed(final ObservableValue<? extends String> observable, final String oldValue, final String newValue) {
-        // this will run whenever text is changed
-        }
-    });
-
-    public ObjectProperty<EventHandler<? super InputMethodEvent>> onInputMethodTextChangedProperty() {
-       if (onInputMethodTextChanged == null) {
-           onInputMethodTextChanged =
-                   new EventHandlerProperty<InputMethodEvent>(
-                           bean,
-                           "onInputMethodTextChanged",
-                           InputMethodEvent.INPUT_METHOD_TEXT_CHANGED);
-       }
-       return onInputMethodTextChanged;
-    }
-
-
-*/

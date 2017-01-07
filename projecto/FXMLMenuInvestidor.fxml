@@ -40,7 +40,7 @@
                               <TableColumn prefWidth="97.0" text="botao_comprar" />
                            </columns>
                         </TableView>
-                        <Text layoutX="640.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saldo actual é de : " />
+                        <Text fx:id="LabelSaldoComprar" layoutX="640.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saldo actual é de : " />
                      </children>
                   </AnchorPane>
                </content>
@@ -97,13 +97,13 @@
             <Insets />
          </BorderPane.margin>
          <children>
-            <Text layoutX="171.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BemVindo &lt;Username&gt;">
+            <Text fx:id="LabelBemVindo" layoutX="171.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BemVindo &lt;Username&gt;">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Button layoutX="1167.0" layoutY="41.0" mnemonicParsing="false" text="Sair" />
-            <Button layoutX="1015.0" layoutY="41.0" mnemonicParsing="false" text="Terminar Sessao" />
+            <Button fx:id="BotaoSairPrograma" layoutX="1167.0" layoutY="41.0" mnemonicParsing="false" onAction="#go_SairPrograma" text="Sair" />
+            <Button fx:id="BotaoTerminaoSessao" layoutX="1015.0" layoutY="41.0" mnemonicParsing="false" onAction="#go_TerminarSessao" text="Terminar Sessao" />
          </children>
       </AnchorPane>
    </top>

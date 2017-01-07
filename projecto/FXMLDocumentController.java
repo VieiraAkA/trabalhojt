@@ -6,6 +6,7 @@
 package projecto;
 
 import com.sun.prism.Image;
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
@@ -25,6 +26,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.BackgroundImage;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.*;
+import javax.imageio.ImageIO;
 import trabalhojoaotiago.*;
 
 /**
@@ -35,6 +37,9 @@ public class FXMLDocumentController implements Initializable {
       
     // comentartio teste
     //      Botões
+    
+    
+    
     
     @FXML
     private BorderPane borderInicial;
@@ -103,6 +108,7 @@ public class FXMLDocumentController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         System.out.println("tamanho: " + Projecto.repository.getListaUsers().size());
+        
     }    
     
 }
