@@ -38,7 +38,7 @@ public class FXMLRegistoController implements Initializable  {
     @FXML
     private Circle UserExistente;
     @FXML
-    private Circle BotaoPWCerto;
+    private Circle TeleExiste;
     @FXML
     private Circle CCExistente;
     @FXML
@@ -64,9 +64,12 @@ public class FXMLRegistoController implements Initializable  {
     @FXML
     private TextField IntEmail;
     @FXML
-    private TextField IntMorada;   
+    private TextField IntMorada; 
     
-    
+    boolean user = false;
+    boolean tele = false;
+    boolean email = false;
+    boolean cc = false;
     
     /**
      * Initializes the controller class.
@@ -149,18 +152,16 @@ public class FXMLRegistoController implements Initializable  {
     @FXML
     void get_info_USER(KeyEvent event) {
         String var = IntUser.getText();
-        boolean res;
-        
-        res = Login.Existe_user(var);
+        boolean res = Login.Existe_user(var);
         
         UserExistente.setVisible(true);
         if(res){
             // se true = existe
-//            UserExistente.setVisible(true);
             UserExistente.setFill(Color.RED);
+            user = false;
         }else{
-//            UserExistente.setVisible(true);
             UserExistente.setFill(Color.GREEN);
+            user = true;
         }        
         
     }
@@ -187,33 +188,40 @@ public class FXMLRegistoController implements Initializable  {
     }
     @FXML
     void get_info_TELE(KeyEvent event) {
-
+        
         String var = IntTelemovel.getText();
-        System.out.println(var);
+      
+        boolean res;
+      
+        TeleExiste.setVisible(true);
+      
+        try{
+            Integer Tele = Integer.valueOf(var);
+            // se chegar aqui então é um numero inteiro
 
-//        String var = IntTelemovel.getText();
-//        boolean res;
-//
-//        CCExistente.setVisible(true);
-//        try{
-//            Integer cc = Integer.valueOf(var);
-//            // se chegar aqui então é um numero inteiro
-//            res = Login.Existe_CartaoCidadao(cc);
-//            TELEmovelExistente.setFill(Color.GREEN);
-//              
-//        }catch(Exception e){
-//            TELEmovelExistente.setFill(Color.RED);
-//            // se chegar aqui não é um numero inteiro
-//            if(var.length() != 0){
-//                if(var.length() == 1){
-//                    var = "";
-//                }    
-//                else{
-//                    var = var.substring(0, var.length() - 1);
-//                }    
-//            }
-//            IntTelemovel.setText(var);
-//        }
+            res = Login.Existe_CartaoCidadao(Tele);
+            if(res){
+                // se true = existe
+                TeleExiste.setFill(Color.RED);
+                tele = false;
+            }else{
+                TeleExiste.setFill(Color.GREEN);
+                tele = true;
+            }
+          
+      }catch(Exception e){
+          TeleExiste.setFill(Color.RED);
+          // se chegar aqui não é um numero inteiro
+          if(var.length() != 0){
+              if(var.length() == 1){
+                  var = "";
+              }    
+              else{
+                  var = var.substring(0, var.length() - 1);
+              }    
+          }
+          IntTelemovel.setText(var);
+    }
         
     }
     @FXML
@@ -226,8 +234,7 @@ public class FXMLRegistoController implements Initializable  {
     @FXML
     void get_info_Email(KeyEvent event) {
 
-//        String var = IntEmail.getText();
-//        System.out.println(var);
+        
         String var = IntEmail.getText();
         boolean res;
         
@@ -237,9 +244,11 @@ public class FXMLRegistoController implements Initializable  {
         if(res){
             // se true = existe
             EmailExistente.setFill(Color.RED);
+            email= false;
         }
         else{
             EmailExistente.setFill(Color.GREEN);
+            email= true;
         }   
         
     }
@@ -251,11 +260,19 @@ public class FXMLRegistoController implements Initializable  {
 
         CCExistente.setVisible(true);
         try{
-            Integer cc = Integer.valueOf(var);
+            Integer CC = Integer.valueOf(var);
             // se chegar aqui então é um numero inteiro
-            res = Login.Existe_CartaoCidadao(cc);
+            res = Login.Existe_CartaoCidadao(CC);
             CCExistente.setFill(Color.GREEN);
-              
+            if(res){
+                // se true = existe
+                CCExistente.setFill(Color.RED);
+                cc= false;
+            }
+            else{
+                CCExistente.setFill(Color.GREEN);
+                cc= true;
+            }  
         }catch(Exception e){
             CCExistente.setFill(Color.RED);
             // se chegar aqui não é um numero inteiro
