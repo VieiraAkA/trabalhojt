@@ -217,6 +217,7 @@ public class FXMLRegistoController implements Initializable  {
             // se chegar aqui então é um numero inteiro
 
             res = Login.Existe_CartaoCidadao(Tele);
+            
             if(res){
                 // se true = existe
                 TeleExiste.setFill(Color.RED);
@@ -224,6 +225,7 @@ public class FXMLRegistoController implements Initializable  {
             }else{
                 TeleExiste.setFill(Color.GREEN);
                 tele = true;
+                
             }
           
       }catch(Exception e){
