@@ -53,11 +53,11 @@ public class FXMLDocumentController implements Initializable {
         Projecto.repository.Serializar();
         
         try {
-        Parent PagLogin = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
-        Scene JanelaLogin = new Scene(PagLogin);
-        Stage LayoutLogin = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        LayoutLogin.setScene(JanelaLogin);
-        LayoutLogin.close();
+            Parent PagLogin = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+            Scene JanelaLogin = new Scene(PagLogin);
+            Stage LayoutLogin = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            LayoutLogin.setScene(JanelaLogin);
+            LayoutLogin.close();
         
         } catch (IOException ex) {
         //Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);

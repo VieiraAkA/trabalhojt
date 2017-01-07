@@ -27,6 +27,28 @@ public class Projecto extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+//        Repository rep = new Repository();
+//        
+//        Login l = new Login();
+//        l.setEmail("email1");
+//        l.setUser("user1");
+//        rep.getListaUsers().put("user1", l);
+//        
+//        l = new Login();
+//        l.setEmail("email2");
+//        l.setUser("user2");
+//        rep.getListaUsers().put("user2", l);
+//        
+//        rep.Serializar();
+
+
+
+//          Repository rep = Repository.Desserializar("ficheiro.bin");
+            Projecto.repository = Repository.Desserializar();
+          System.out.println("tamanho: " + Projecto.repository.getListaUsers().size());
+        
+        
         launch(args);
     }
     
@@ -52,6 +74,7 @@ public class Projecto extends Application {
         
         stage.setScene(JanelaInicial);
         stage.show();
+        
     }
 
     

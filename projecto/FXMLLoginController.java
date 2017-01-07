@@ -22,7 +22,6 @@ import trabalhojoaotiago.Repository;
 
 
 public class FXMLLoginController implements Initializable {
-    
     @FXML
     private Button botaoRegistar;
     @FXML
