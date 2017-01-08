@@ -6,105 +6,117 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane id="LayoutMenuInvestidor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projecto.FXMLMenuInvestidorController">
-   <center>
-      <TabPane maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
-        <tabs>
-          <Tab fx:id="tab_inicio" closable="false" text="Inicio">
-               <content>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <Button fx:id="botao_comprar" layoutX="325.0" layoutY="270.0" mnemonicParsing="false" onAction="#go_to_tab_comprar" text="  Comprar  " />
-                        <Button fx:id="botao_vender" layoutX="606.0" layoutY="270.0" mnemonicParsing="false" onAction="#go_to_tab_vender" text="  Vender  " />
-                        <Button fx:id="botao_consultar" layoutX="846.0" layoutY="270.0" mnemonicParsing="false" onAction="#go_to_tab_consulta" text="  Consultar  " />
-                     </children>
-                  </AnchorPane>
-               </content>
-            </Tab>
-          <Tab fx:id="tab_comprar" text="Comprar">
-               <content>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <TableView layoutX="14.0" layoutY="15.0" prefHeight="548.0" prefWidth="489.0">
-                           <columns>
-                            <TableColumn prefWidth="97.0" text="NomePessoa" />
-                              <TableColumn prefWidth="94.0" text="Preço" />
-                              <TableColumn prefWidth="94.0" text="Juros" />
-                              <TableColumn prefWidth="94.0" text="Accao" />
-                              <TableColumn prefWidth="97.0" text="botao_comprar" />
-                           </columns>
-                        </TableView>
-                        <Text fx:id="LabelSaldoComprar" layoutX="640.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saldo actual é de : " />
-                     </children>
-                  </AnchorPane>
-               </content>
-            </Tab>
-            <Tab fx:id="tab_vender" text="Vender">
-               <content>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <TableView layoutX="14.0" layoutY="15.0" prefHeight="548.0" prefWidth="489.0">
-                           <columns>
-                              <TableColumn prefWidth="97.0" text="Nome acção" />
-                              <TableColumn prefWidth="94.0" text="Valor" />
-                              <TableColumn prefWidth="94.0" text="Juros" />
-                              <TableColumn prefWidth="94.0" text="GanhoTotal" />
-                              <TableColumn prefWidth="97.0" text="botao_vender ?" />
-                           </columns>
-                        </TableView>
-                     </children>
-                  </AnchorPane>
-               </content>
-            </Tab>
-            <Tab fx:id="tab_consultar" text="Consultar">
-               <content>
-                  <BorderPane prefHeight="200.0" prefWidth="200.0">
-                     <left>
-                        <VBox fillWidth="false" prefHeight="578.0" prefWidth="263.0" spacing="35.0" BorderPane.alignment="CENTER">
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projecto.FXMLMenuInvestidorController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1280.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@BackGround2.png" />
+         </image>
+      </ImageView>
+      <BorderPane id="LayoutMenuInvestidor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0">
+         <center>
+            <TabPane maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab fx:id="tab_inicio" closable="false" text="Inicio">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <Button mnemonicParsing="false" text="Carteira de Titulos" textAlignment="CENTER" />
-                              <Button mnemonicParsing="false" text="Cotação Média de Compra" />
-                              <Button mnemonicParsing="false" text="Cotação Actual" />
-                              <Button mnemonicParsing="false" text="quantidade quantidade detida e valor actual" />
-                              <Button mnemonicParsing="false" text="movimentos a débito e crédito da sua conta" />
+                              <Button fx:id="botao_comprar" layoutX="325.0" layoutY="270.0" mnemonicParsing="false" onAction="#go_to_tab_comprar" text="  Comprar  " />
+                              <Button fx:id="botao_vender" layoutX="606.0" layoutY="270.0" mnemonicParsing="false" onAction="#go_to_tab_vender" text="  Vender  " />
+                              <Button fx:id="botao_consultar" layoutX="846.0" layoutY="270.0" mnemonicParsing="false" onAction="#go_to_tab_consulta" text="  Consultar  " />
                            </children>
-                           <opaqueInsets>
-                              <Insets />
-                           </opaqueInsets>
-                           <padding>
-                              <Insets top="100.0" />
-                           </padding>
-                           <BorderPane.margin>
-                              <Insets left="20.0" />
-                           </BorderPane.margin>
-                        </VBox>
-                     </left>
-                  </BorderPane>
-               </content>
-            </Tab>
-        </tabs>
-      </TabPane>
-   </center>
-   <top>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="117.0" prefWidth="1280.0" style="-fx-background-color: grey;" BorderPane.alignment="BOTTOM_CENTER">
-         <BorderPane.margin>
-            <Insets />
-         </BorderPane.margin>
-         <children>
-            <Text fx:id="LabelBemVindo" layoutX="171.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BemVindo &lt;Username&gt;">
-               <font>
-                  <Font size="22.0" />
-               </font>
-            </Text>
-            <Button fx:id="BotaoSairPrograma" layoutX="1167.0" layoutY="41.0" mnemonicParsing="false" onAction="#go_SairPrograma" text="Sair" />
-            <Button fx:id="BotaoTerminaoSessao" layoutX="1015.0" layoutY="41.0" mnemonicParsing="false" onAction="#go_TerminarSessao" text="Terminar Sessao" />
-         </children>
-      </AnchorPane>
-   </top>
-</BorderPane>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                <Tab fx:id="tab_comprar" text="Comprar">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <TableView layoutX="14.0" layoutY="15.0" prefHeight="548.0" prefWidth="489.0">
+                                 <columns>
+                                  <TableColumn prefWidth="97.0" text="NomePessoa" />
+                                    <TableColumn prefWidth="94.0" text="Preço" />
+                                    <TableColumn prefWidth="94.0" text="Juros" />
+                                    <TableColumn prefWidth="94.0" text="Accao" />
+                                    <TableColumn prefWidth="97.0" text="botao_comprar" />
+                                 </columns>
+                              </TableView>
+                              <Text fx:id="LabelSaldoComprar" layoutX="640.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saldo actual é de : " />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tab_vender" text="Vender">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <TableView layoutX="14.0" layoutY="15.0" prefHeight="548.0" prefWidth="489.0">
+                                 <columns>
+                                    <TableColumn prefWidth="97.0" text="Nome acção" />
+                                    <TableColumn prefWidth="94.0" text="Valor" />
+                                    <TableColumn prefWidth="94.0" text="Juros" />
+                                    <TableColumn prefWidth="94.0" text="GanhoTotal" />
+                                    <TableColumn prefWidth="97.0" text="botao_vender ?" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tab_consultar" text="Consultar">
+                     <content>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                           <left>
+                              <VBox fillWidth="false" prefHeight="578.0" prefWidth="263.0" spacing="35.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Carteira de Titulos" textAlignment="CENTER" />
+                                    <Button mnemonicParsing="false" text="Cotação Média de Compra" />
+                                    <Button mnemonicParsing="false" text="Cotação Actual" />
+                                    <Button mnemonicParsing="false" text="quantidade quantidade detida e valor actual" />
+                                    <Button mnemonicParsing="false" text="movimentos a débito e crédito da sua conta" />
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets top="100.0" />
+                                 </padding>
+                                 <BorderPane.margin>
+                                    <Insets left="20.0" />
+                                 </BorderPane.margin>
+                              </VBox>
+                           </left>
+                        </BorderPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+         <top>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="117.0" prefWidth="1280.0" BorderPane.alignment="BOTTOM_CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <children>
+                  <Text fx:id="LabelBemVindo" layoutX="171.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BemVindo &lt;Username&gt;">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="BotaoSairPrograma" layoutX="1167.0" layoutY="41.0" mnemonicParsing="false" onAction="#go_SairPrograma" text="Sair" />
+                  <Button fx:id="BotaoTerminaoSessao" layoutX="1015.0" layoutY="41.0" mnemonicParsing="false" onAction="#go_TerminarSessao" text="Terminar Sessao" />
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

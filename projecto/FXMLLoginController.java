@@ -23,6 +23,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.*;
+import static javax.swing.JOptionPane.showMessageDialog;
 import trabalhojoaotiago.Login;
 import trabalhojoaotiago.Repository;
 
@@ -54,7 +55,6 @@ public class FXMLLoginController implements Initializable {
             Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
     @FXML
     private void loginVoltarAtras(ActionEvent event) {
         System.out.println("Botao Voltar OK");
@@ -83,13 +83,19 @@ public class FXMLLoginController implements Initializable {
             
             if (Projecto.repository.getListaUsers().get(intuser).getPassword().equals(intpw)){
                 try {
-                    
                     Projecto.setUserLogado(Projecto.repository.getListaUsers().get(intuser));
+                    
                     Parent MenuInvestidor = FXMLLoader.load(getClass().getResource("FXMLMenuInvestidor.fxml"));
                     Scene JanelaInvestidor = new Scene(MenuInvestidor);
                     Stage LayoutInvestidor = (Stage) ((Node) event.getSource()).getScene().getWindow();
                     LayoutInvestidor.setScene(JanelaInvestidor);
                     LayoutInvestidor.show();
+                    
+                    /*
+                    Thread inicioSessao = new Thread();
+                    inicioSessao.start();
+                    showMessageDialog(null,"Seja Bem-Vindo " + intuser);
+                    */
                     
                 } catch (IOException ex) {
                     //Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
@@ -100,9 +106,7 @@ public class FXMLLoginController implements Initializable {
         }else{
             InfoErrada.setText      ("         User ou Password Incorrectos! Tente novamente.");
         }
-    }
-    
-    
+    }    
     @FXML
     private void loginExitPrograma(ActionEvent event) {
         Projecto.repository.Serializar();
