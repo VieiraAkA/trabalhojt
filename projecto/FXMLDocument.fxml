@@ -17,7 +17,7 @@
                   <Image url="@BackGround.png" />
                </image>
             </ImageView>
-            <Button fx:id="InicioBotaoLoginq" alignment="TOP_RIGHT" contentDisplay="CENTER" layoutX="530.0" layoutY="425.0" mnemonicParsing="false" onAction="#inicioJaneladeLogin" text="Login" textAlignment="CENTER">
+            <Button fx:id="InicioBotaoLoginq" alignment="TOP_RIGHT" contentDisplay="CENTER" layoutX="979.0" layoutY="459.0" mnemonicParsing="false" onAction="#inicioJaneladeLogin" text="Login" textAlignment="CENTER">
                <opaqueInsets>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </opaqueInsets>
@@ -28,7 +28,7 @@
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button fx:id="InicioBotaoRegistar" alignment="TOP_RIGHT" contentDisplay="CENTER" layoutX="670.0" layoutY="425.0" mnemonicParsing="false" onAction="#inicioJanelaRegisto" text="Registar" textAlignment="CENTER">
+            <Button fx:id="InicioBotaoRegistar" alignment="TOP_RIGHT" contentDisplay="CENTER" layoutX="1145.0" layoutY="460.0" mnemonicParsing="false" onAction="#inicioJanelaRegisto" text="Registar" textAlignment="CENTER">
                <opaqueInsets>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </opaqueInsets>
