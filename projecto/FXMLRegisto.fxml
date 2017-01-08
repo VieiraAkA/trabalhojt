@@ -11,119 +11,140 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane id="borderRegisto" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projecto.FXMLRegistoController">
-   <padding>
-      <Insets left="10.0" right="10.0" />
-   </padding>
-   <bottom>
-      <AnchorPane prefHeight="720.0" prefWidth="1290.0" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="814.0" fitWidth="1280.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@BackGround2.png" />
-               </image>
-            </ImageView>
-            <Text layoutX="450.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="          Por Favor,  preencher todos os campos!" wrappingWidth="334.5859375">
-               <font>
-                  <Font size="16.0" />
-               </font></Text>
-            <Text layoutX="473.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username : " wrappingWidth="78.466796875">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Text>
-            <Text layoutX="472.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password : " wrappingWidth="80.126953125">
-               <font>
-                  <Font size="14.0" />
-               </font></Text>
-            <Text layoutX="470.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Primeiro nome : " wrappingWidth="108.416015625">
-               <font>
-                  <Font size="14.0" />
-               </font></Text>
-            <Text layoutX="472.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ultimo nome : " wrappingWidth="104.38671875">
-               <font>
-                  <Font size="14.0" />
-               </font></Text>
-            <Text layoutX="472.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telemovel :" wrappingWidth="79.9296875">
-               <font>
-                  <Font size="14.0" />
-               </font></Text>
-            <Text layoutX="473.0" layoutY="431.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Morada :" wrappingWidth="64.14453125">
-               <font>
-                  <Font size="14.0" />
-               </font></Text>
-            <Text layoutX="473.0" layoutY="476.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" wrappingWidth="51.212890625">
-               <font>
-                  <Font size="14.0" />
-               </font></Text>
-            <Text layoutX="472.0" layoutY="516.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C. Cidadão :" wrappingWidth="79.91796875">
-               <font>
-                  <Font size="14.0" />
-               </font></Text>
-            <TextField fx:id="IntUser" layoutX="591.0" layoutY="200.0" onKeyReleased="#get_info_USER" prefHeight="25.0" prefWidth="170.0" promptText="              Username">
-               <font>
-                  <Font size="13.0" />
-               </font></TextField>
-            <TextField fx:id="IntPW" layoutX="591.0" layoutY="240.0" onKeyTyped="#get_info_PW" prefHeight="25.0" prefWidth="170.0" promptText="               Password">
-               <font>
-                  <Font size="13.0" />
-               </font></TextField>
-            <TextField fx:id="IntPrimeiroNome" layoutX="591.0" layoutY="286.0" onKeyTyped="#get_info_FNome" prefHeight="25.0" prefWidth="170.0" promptText="          Primeiro nome">
-               <font>
-                  <Font size="13.0" />
-               </font></TextField>
-            <TextField fx:id="IntUltimoNome" layoutX="591.0" layoutY="326.0" onKeyTyped="#get_info_UNome" prefHeight="25.0" prefWidth="170.0" promptText="            Ultimo nome">
-               <font>
-                  <Font size="13.0" />
-               </font></TextField>
-            <TextField fx:id="IntTelemovel" layoutX="591.0" layoutY="368.0" onKeyTyped="#get_info_TELE" prefHeight="25.0" prefWidth="170.0" promptText="              Telemovel">
-               <font>
-                  <Font size="13.0" />
-               </font></TextField>
-            <TextField fx:id="IntMorada" layoutX="591.0" layoutY="411.0" onKeyTyped="#get_info_Morada" prefHeight="25.0" prefWidth="170.0" promptText="                Morada">
-               <font>
-                  <Font size="13.0" />
-               </font></TextField>
-            <TextField fx:id="IntEmail" layoutX="591.0" layoutY="456.0" onKeyReleased="#get_info_Email" prefHeight="25.0" prefWidth="170.0" promptText="                 Email ">
-               <font>
-                  <Font size="13.0" />
-               </font></TextField>
-            <TextField fx:id="IntCC" layoutX="591.0" layoutY="496.0" onKeyReleased="#get_info_CC" prefHeight="25.0" prefWidth="170.0" promptText="       Cartão de Cidadão">
-               <font>
-                  <Font size="13.0" />
-               </font></TextField>
-            <Button fx:id="botaoRegistar2" alignment="CENTER" contentDisplay="CENTER" layoutX="569.0" layoutY="551.0" mnemonicParsing="false" onAction="#registo_dados_user_novo" text="Registar" textAlignment="CENTER">
-               <opaqueInsets>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </opaqueInsets>
-               <padding>
-                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
-               </padding>
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Button>
-            <Circle fx:id="UserExistente" fill="#0099ff" layoutX="785.0" layoutY="212.0" radius="10.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.7" visible="false" />
-            <Circle fx:id="TeleExiste" fill="#008ddb" layoutX="785.0" layoutY="380.0" radius="10.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.7" visible="false" />
-            <Circle fx:id="EmailExistente" fill="#0099ff" layoutX="785.0" layoutY="468.0" radius="10.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.7" visible="false" />
-            <Circle fx:id="CCExistente" fill="#0099ff" layoutX="785.0" layoutY="508.0" radius="10.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.7" visible="false" />
-            <Button fx:id="botaoVoltar" layoutX="55.0" layoutY="635.0" mnemonicParsing="false" onAction="#registoVoltarAtras" text="Voltar">
-               <padding>
-                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
-               </padding>
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Button>
-            <Button fx:id="botaoSair" alignment="CENTER_RIGHT" layoutX="1150.0" layoutY="635.0" mnemonicParsing="false" onAction="#registoExitPrograma" text=" Sair ">
-               <padding>
-                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
-               </padding>
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Button>
-         </children>
-      </AnchorPane>
-   </bottom>
-</BorderPane>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projecto.FXMLRegistoController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1280.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@BackGround2.png" />
+         </image>
+      </ImageView>
+      <BorderPane id="borderRegisto" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0">
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+         <bottom>
+            <AnchorPane prefHeight="720.0" prefWidth="1290.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text layoutX="450.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="          Por Favor,  preencher todos os campos!" wrappingWidth="334.5859375">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="473.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username : " wrappingWidth="78.466796875">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="472.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password : " wrappingWidth="80.126953125">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="470.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Primeiro nome : " wrappingWidth="108.416015625">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="472.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ultimo nome : " wrappingWidth="104.38671875">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="472.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telemovel :" wrappingWidth="79.9296875">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="473.0" layoutY="431.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Morada :" wrappingWidth="64.14453125">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="473.0" layoutY="476.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" wrappingWidth="51.212890625">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="472.0" layoutY="516.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C. Cidadão :" wrappingWidth="79.91796875">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="IntUser" layoutX="591.0" layoutY="200.0" onKeyReleased="#get_info_USER" prefHeight="25.0" prefWidth="170.0" promptText="              Username">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="IntPW" layoutX="591.0" layoutY="240.0" onKeyTyped="#get_info_PW" prefHeight="25.0" prefWidth="170.0" promptText="               Password">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="IntPrimeiroNome" layoutX="591.0" layoutY="286.0" onKeyTyped="#get_info_FNome" prefHeight="25.0" prefWidth="170.0" promptText="          Primeiro nome">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="IntUltimoNome" layoutX="591.0" layoutY="326.0" onKeyTyped="#get_info_UNome" prefHeight="25.0" prefWidth="170.0" promptText="            Ultimo nome">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="IntTelemovel" layoutX="591.0" layoutY="368.0" onKeyTyped="#get_info_TELE" prefHeight="25.0" prefWidth="170.0" promptText="              Telemovel">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="IntMorada" layoutX="591.0" layoutY="411.0" onKeyTyped="#get_info_Morada" prefHeight="25.0" prefWidth="170.0" promptText="                Morada">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="IntEmail" layoutX="591.0" layoutY="456.0" onKeyReleased="#get_info_Email" prefHeight="25.0" prefWidth="170.0" promptText="                 Email ">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="IntCC" layoutX="591.0" layoutY="496.0" onKeyReleased="#get_info_CC" prefHeight="25.0" prefWidth="170.0" promptText="       Cartão de Cidadão">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="botaoRegistar2" alignment="CENTER" contentDisplay="CENTER" layoutX="569.0" layoutY="551.0" mnemonicParsing="false" onAction="#registo_dados_user_novo" text="Registar" textAlignment="CENTER">
+                     <opaqueInsets>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Circle fx:id="UserExistente" fill="#0099ff" layoutX="785.0" layoutY="212.0" radius="10.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.7" visible="false" />
+                  <Circle fx:id="TeleExiste" fill="#008ddb" layoutX="785.0" layoutY="380.0" radius="10.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.7" visible="false" />
+                  <Circle fx:id="EmailExistente" fill="#0099ff" layoutX="785.0" layoutY="468.0" radius="10.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.7" visible="false" />
+                  <Circle fx:id="CCExistente" fill="#0099ff" layoutX="785.0" layoutY="508.0" radius="10.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.7" visible="false" />
+                  <Button fx:id="botaoVoltar" layoutX="55.0" layoutY="635.0" mnemonicParsing="false" onAction="#registoVoltarAtras" text="Voltar">
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="botaoSair" alignment="CENTER_RIGHT" layoutX="1150.0" layoutY="635.0" mnemonicParsing="false" onAction="#registoExitPrograma" text=" Sair ">
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

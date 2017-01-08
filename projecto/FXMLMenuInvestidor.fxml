@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projecto.FXMLMenuInvestidorController">
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projecto.FXMLMenuInvestidorController">
    <children>
       <ImageView fitHeight="720.0" fitWidth="1280.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
          <image>
