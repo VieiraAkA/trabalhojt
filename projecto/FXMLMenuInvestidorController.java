@@ -101,8 +101,13 @@ public class FXMLMenuInvestidorController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
         Login UserLogado = Projecto.getUserLogado();
+        
         LabelBemVindo.setText(" Bem Vindo " + UserLogado.getPriNome() );
+        
+        
+        
     }  
     
     
