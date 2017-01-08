@@ -5,16 +5,12 @@
  */
 package projecto;
 
-import com.sun.prism.Image;
-import java.awt.image.BufferedImage;
-import java.io.InputStream;
 import javafx.application.Application;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javax.imageio.ImageIO;
+import trabalhojoaotiago.Login;
 import trabalhojoaotiago.Repository;
 
 /**
@@ -25,6 +21,18 @@ public class Projecto extends Application {
     
     public static Repository repository;
     public static String filename = "ficheiro.bin";
+    public static Login UserLogado;
+
+    
+    public static Login getUserLogado() {
+        return UserLogado;
+    }
+    
+    public static void setUserLogado(Login Username) {
+        Projecto.UserLogado = Username;
+    }
+    
+    
     
     /**
      * @param args the command line arguments

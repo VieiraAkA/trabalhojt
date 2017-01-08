@@ -34,7 +34,7 @@ public class FXMLLoginController implements Initializable {
     private PasswordField IntPW;
     @FXML
     private Text InfoErrada;
-    
+ 
     
     
     //JanelaRegisto
@@ -78,6 +78,8 @@ public class FXMLLoginController implements Initializable {
         String intpw = IntPW.getText();
         
         if(Projecto.repository.getListaUsers().containsKey(intuser)){
+             
+            // chave (user) , objecto login;
             
             if (Projecto.repository.getListaUsers().get(intuser).getPassword().equals(intpw)){
                 try {
@@ -86,14 +88,16 @@ public class FXMLLoginController implements Initializable {
                     Stage LayoutInvestidor = (Stage) ((Node) event.getSource()).getScene().getWindow();
                     LayoutInvestidor.setScene(JanelaInvestidor);
                     LayoutInvestidor.show();
+                    Projecto.setUserLogado(Projecto.repository.getListaUsers().get(intuser));
+                    
                 } catch (IOException ex) {
                     //Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }else{
-                InfoErrada.setText  ("        Password Incorrecta! Tente novamente.");
+                InfoErrada.setText  ("             Password Incorrecta! Tente novamente.");
             }
         }else{
-            InfoErrada.setText      ("   User ou Password Incorrectos! Tente novamente.");
+            InfoErrada.setText      ("         User ou Password Incorrectos! Tente novamente.");
         }
     }
     

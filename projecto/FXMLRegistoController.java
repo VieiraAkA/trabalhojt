@@ -98,16 +98,12 @@ public class FXMLRegistoController implements Initializable  {
             //Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-    
     @FXML
     private void registoRegistarUser(ActionEvent event) {
         // adicionar novo user ao sistema 
         
         
     }
-    
-    
     @FXML
     private void registoExitPrograma(ActionEvent event) {
         
@@ -123,7 +119,6 @@ public class FXMLRegistoController implements Initializable  {
         }
         
     }
-    
     @FXML
     private void registo_dados_user_novo(ActionEvent event){
         System.out.println("ASJGDCFASGHDBA");
@@ -161,9 +156,6 @@ public class FXMLRegistoController implements Initializable  {
         //            -Repositorio.getInstance().getListaUsers().put(IntUser.getText(), utilizador);; AQUI adiciona á lista
         
     }
-    
-    
-    
     
     //######################################################################         Username         ######################################
     @FXML
@@ -254,7 +246,7 @@ public class FXMLRegistoController implements Initializable  {
         //System.out.println(var);
         
     }
-//##############################################################################      Email        #########################################
+    //##############################################################################      Email        ######################################
     @FXML
     void get_info_Email(KeyEvent event) {
 
@@ -315,7 +307,9 @@ public class FXMLRegistoController implements Initializable  {
     }
     
     
-    /*
+    
+}
+/*
     @FXML
     public String get_email(TextField var){
     String email = var.getText();
@@ -352,14 +346,3 @@ public class FXMLRegistoController implements Initializable  {
     
     
     */
-    
-    
-    
-    
-    
-    
-     
-    
-    
-    
-}
