@@ -91,7 +91,6 @@ public class FXMLLoginController implements Initializable {
                     LayoutInvestidor.setScene(JanelaInvestidor);
                     LayoutInvestidor.show();
                     
-                    
                 } catch (IOException ex) {
                     //Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
                 }
