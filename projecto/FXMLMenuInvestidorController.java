@@ -52,7 +52,7 @@ public class FXMLMenuInvestidorController implements Initializable {
     private Tab tab_consultar;
     
 
-    
+    //jtrfhtfjycvjycgtfghcomentario
     
     @FXML
     void go_SairPrograma(ActionEvent event) {
