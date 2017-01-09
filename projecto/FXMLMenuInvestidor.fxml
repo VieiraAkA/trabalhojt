@@ -14,8 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projecto.FXMLMenuInvestidorController">
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projecto.FXMLMenuInvestidorController">
    <children>
       <ImageView fitHeight="720.0" fitWidth="1280.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -24,16 +23,34 @@
       </ImageView>
       <BorderPane id="LayoutMenuInvestidor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0">
          <center>
-            <TabPane maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <TabPane fx:id="tabmenu" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
               <tabs>
                 <Tab fx:id="tab_inicio" closable="false" text="Inicio">
                      <content>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <Button fx:id="botao_comprar" layoutX="325.0" layoutY="270.0" mnemonicParsing="false" onAction="#go_to_tab_comprar" text="  Comprar  " />
-                              <Button fx:id="botao_vender" layoutX="606.0" layoutY="270.0" mnemonicParsing="false" onAction="#go_to_tab_vender" text="  Vender  " />
-                              <Button fx:id="botao_consultar" layoutX="846.0" layoutY="270.0" mnemonicParsing="false" onAction="#go_to_tab_consulta" text="  Consultar  " />
+                              <Button fx:id="botao_comprar" layoutX="315.0" layoutY="213.0" mnemonicParsing="false" onAction="#go_to_tab_comprar" text="  Comprar  ">
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                 </padding></Button>
+                              <Button fx:id="botao_vender" layoutX="604.0" layoutY="213.0" mnemonicParsing="false" onAction="#go_to_tab_vender" text="  Vender  ">
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                 </padding></Button>
+                              <Button fx:id="botao_consultar" layoutX="871.0" layoutY="213.0" mnemonicParsing="false" onAction="#go_to_tab_consulta" text="  Consultar  ">
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                 </padding></Button>
+                              <Button fx:id="Perfil" layoutX="471.0" layoutY="364.0" mnemonicParsing="false" onAction="#go_to_tab_Perfil" text="  Perfil  " textAlignment="CENTER">
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                 </padding>
+                              </Button>
+                              <Button fx:id="BotaoTerminaoSessao2" layoutX="723.0" layoutY="364.0" mnemonicParsing="false" onAction="#go_TerminarSessao" text="Terminar Sessao" />
                            </children>
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                           </padding>
                         </AnchorPane>
                      </content>
                   </Tab>
@@ -95,6 +112,69 @@
                                  </BorderPane.margin>
                               </VBox>
                            </left>
+                        </BorderPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tab_perfil" text="Perfil">
+                     <content>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                           <left>
+                              <VBox fillWidth="false" prefHeight="578.0" prefWidth="263.0" spacing="35.0" BorderPane.alignment="CENTER">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets top="100.0" />
+                                 </padding>
+                                 <BorderPane.margin>
+                                    <Insets left="20.0" />
+                                 </BorderPane.margin>
+                                 <children>
+                                    <Button fx:id="alteraDados" mnemonicParsing="false" text="Alterar dados Pessoais" />
+                                 </children>
+                              </VBox>
+                           </left>
+                           <center>
+                              <AnchorPane prefHeight="578.0" prefWidth="1103.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Text fx:id="dados_nome" layoutX="25.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome: " wrappingWidth="445.5078125">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="dados_user" layoutX="25.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username :">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="dados_telemovel" layoutX="25.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telemovel :">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="dados_morada" layoutX="25.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Morada :">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="dados_email" layoutX="25.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email :">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="dados_cc" layoutX="15.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  Cartão de Cidadão: ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="dados_saldo" layoutX="25.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saldo :">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                           </center>
                         </BorderPane>
                      </content>
                   </Tab>
