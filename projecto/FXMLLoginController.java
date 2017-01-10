@@ -82,24 +82,32 @@ public class FXMLLoginController implements Initializable {
             // chave (user) , objecto login;
             
             if (Projecto.repository.getListaUsers().get(intuser).getPassword().equals(intpw)){
-                try {
-                    Projecto.setUserLogado(Projecto.repository.getListaUsers().get(intuser));
-                    
-                    Parent MenuInvestidor = FXMLLoader.load(getClass().getResource("FXMLMenuInvestidor.fxml"));
-                    Scene JanelaInvestidor = new Scene(MenuInvestidor);
-                    Stage LayoutInvestidor = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                    LayoutInvestidor.setScene(JanelaInvestidor);
-                    LayoutInvestidor.show();
-                    
-                    /*
-                    Thread inicioSessao = new Thread();
-                    inicioSessao.start();
-                    showMessageDialog(null,"Seja Bem-Vindo " + intuser);
-                    */
-                    
-                } catch (IOException ex) {
-                    //Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                
+                //Thread investidor = new Thread(){
+                //  @Override
+                //  public void run(){
+                      try {
+                        Projecto.setUserLogado(Projecto.repository.getListaUsers().get(intuser));
+
+                        Parent MenuInvestidor = FXMLLoader.load(getClass().getResource("FXMLMenuInvestidor.fxml"));
+                        Scene JanelaInvestidor = new Scene(MenuInvestidor);
+                        Stage LayoutInvestidor = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                        LayoutInvestidor.setScene(JanelaInvestidor);
+                        LayoutInvestidor.show();
+
+                        /*
+                        Thread inicioSessao = new Thread();
+                        inicioSessao.start();
+                        showMessageDialog(null,"Seja Bem-Vindo " + intuser);
+                        */
+
+                    } catch (IOException ex) {
+                        //Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                //  }  
+                //};
+                //investidor.start();
+                
             }else{
                 InfoErrada.setText  ("             Password Incorrecta! Tente novamente.");
             }
